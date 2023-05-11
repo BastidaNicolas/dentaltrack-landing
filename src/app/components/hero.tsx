@@ -10,7 +10,7 @@ export default function Hero() {
           <div className="text-5xl lg:text-7xl font-bold text-white mb-8 md:max-w-lg">
             Simplify patient appointment management.
           </div>
-          <p className="text-white mb-5 text-base md:max-w-lg">
+          <p className="text-white mb-5 text-lg sm:text-base md:max-w-lg">
             DentalTrack helps dental practices efficiently manage their
             appointments and send reminders to patients, reducing missed
             appointments and increasing productivity.

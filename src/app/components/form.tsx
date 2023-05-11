@@ -28,11 +28,11 @@ export default function Form() {
             Get_Notified
             <button
               type="submit"
-              className="z-10 absolute top-0 left-0 group-hover:-translate-x-1 group-hover:-translate-y-1 duration-75 bg-white font-bold text-base capitalize border-2 border-black rounded-lg py-2 px-3 text-black w-fit h-full truncate"
+              className="z-10 absolute top-0 left-0 group-hover:-translate-x-1 group-hover:-translate-y-1 duration-75 bg-white font-bold text-base capitalize border-2 border-black rounded-lg py-2 px-5 text-black w-fit h-full truncate"
             >
               Get Notified
             </button>
-            <div className="z-0 absolute top-0 left-0 bg-black font-bold text-base capitalize border-2 border-black rounded-lg py-2 px-3 text-black w-fit h-full truncate">
+            <div className="z-0 absolute top-0 left-0 bg-black font-bold text-base capitalize border-2 border-black rounded-lg py-2 px-5 text-black w-fit h-full truncate">
               Get Notified
             </div>
           </div>
