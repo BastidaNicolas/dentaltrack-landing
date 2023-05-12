@@ -16,7 +16,7 @@ export default function Home() {
       <Header />
       <Hero />
       <GridSection />
-      <div className="max-w-5xl m-auto mb-24 px-2 lg:px-0">
+      <div className="max-w-5xl m-auto mb-24 px-3 lg:px-0">
         <XlCard
           content={{
             title: "Efficient Appointment Management",

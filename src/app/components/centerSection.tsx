@@ -1,6 +1,6 @@
 export default function CenterSection() {
   return (
-    <div className="relative border-y-2 border-y-black bg-blue-500 text-white px-2 lg:px-0 pt-9 pb-14 md:py-20 mb-24 sm:mb-36">
+    <div className="relative border-y-2 border-y-black bg-blue-500 text-white px-3 lg:px-0 pt-9 pb-14 md:py-20 mb-24 sm:mb-36">
       <div className="relative z-10 max-w-5xl m-auto flex">
         <svg
           width="198"

@@ -87,7 +87,7 @@ export default function PaymentOptions() {
 
   return (
     <div
-      className="max-w-5xl m-auto mb-48 flex flex-col sm:items-center items-start px-2"
+      className="max-w-5xl m-auto mb-24 md:mb-48 flex flex-col sm:items-center items-start px-3 lg:px-0"
       id="pricing"
     >
       <div className="text-3xl font-bold capitalize mb-6">

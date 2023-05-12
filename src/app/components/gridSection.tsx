@@ -29,7 +29,7 @@ const cardContent = [
 
 export default function GridSection() {
     return (
-      <div className="px-2 pt-24 pb-24 md:pb-48 lg:px-0">
+      <div className="px-3 pt-24 pb-24 md:pb-48 lg:px-0">
         <div className="max-w-5xl m-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 sm:gap-10 md:gap-[53px]">
             {cardContent.map((item, index) => (
                 <SmCard key={index} title={item.title} description={item.description}/>

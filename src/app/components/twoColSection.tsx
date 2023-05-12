@@ -2,7 +2,7 @@ import LgCard from "./cards/lgCard";
 
 export default function TwoColSection() {
   return (
-    <div className="grid grid-cols-1 px-2 lg:px-0 sm:grid-cols-2 gap-16 sm:gap-8 md:gap-16 max-w-5xl m-auto mb-24">
+    <div className="grid grid-cols-1 px-3 lg:px-0 sm:grid-cols-2 gap-16 sm:gap-8 md:gap-16 max-w-5xl m-auto mb-24">
       <LgCard
         title="Intelligent Patient Notifications"
         description="With DentalTrack, patients are automatically notified when an appointment is scheduled and when it's time to come in. Our app uses WhatsApp to send reminders, ensuring that patients never miss an appointment. This not only helps keep the schedule on track, but also leads to happier, healthier patients."

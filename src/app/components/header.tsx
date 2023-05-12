@@ -3,7 +3,7 @@ import NotifyBtn from "./notifyBtn";
 
 export default function Header() {
   return (
-    <div className="border-b-2 border-b-black px-2 py-3 lg:px-0">
+    <div className="border-b-2 border-b-black px-3 py-3 lg:px-0">
       <div className="max-w-4xl m-auto flex flex-wrap justify-between items-center">
         <div className="font-bold text-xl">DentalTrack</div>
         <div className="flex items-center" >
