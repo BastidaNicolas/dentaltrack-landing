@@ -16,7 +16,7 @@ type XlCardType = {
 
 export default function XlCard({content, colors, image, reverse}:XlCardType) {
   return (
-    <div className="relative w-full md:grid md:grid-cols-12 items-center mb-24">
+    <div className="relative w-full md:grid md:grid-cols-12 items-center mb-12 md:mb-36 ">
       <div className={`z-10 relative flex flex-col items-center md:border-2 md:border-black md:${colors.background} md:rounded-2xl md:grid md:grid-cols-11 ${reverse ? 'md:col-start-1 col-end-12':'md:col-start-2 col-end-13'} py-6 md:py-16`}>
         <div className={`md:absolute mb-5 md:mb-0 m-auto z-10 w-full max-w-[90%] sm:max-w-[80%] md:max-w-none md:w-auto md:-top-[20%] ${reverse ? 'md:-right-[20%] md:col-start-7 md:col-end-13':'md:-left-[20%] md:col-start-1 md:col-end-6'}`}>
           <Image src={image} alt="think" className="block w-full" />
