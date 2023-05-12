@@ -10,7 +10,7 @@ export default function NotifyBtn({ text }: notifyBtnType) {
     <Link
       className="relative py-2 px-5 font-bold text-lg sm:text-base capitalize group block w-fit"
       href={"/#form"}
-      scroll
+      scroll={false}
     >
       {text}
       <div className="z-10 absolute top-0 left-0 group-hover:-translate-x-1 group-hover:-translate-y-1 duration-100 bg-white font-bold text-lg sm:text-base capitalize border-2 border-black rounded-lg py-2 px-5 truncate ">

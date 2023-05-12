@@ -1,4 +1,5 @@
 import Link from "next/link";
+import ScrollToTop from "./scrollToTop";
 
 export default function Footer() {
   return (
@@ -6,13 +7,7 @@ export default function Footer() {
       <div className="max-w-5xl m-auto flex flex-col sm:flex-row sm:justify-between sm:items-center">
         <ul className="sm:flex sm:items-center">
           <li>
-            <Link
-              href={"/"}
-              className="block capitalize font-bold  mb-6 sm:mb-0 sm:mr-6"
-              scroll
-            >
-              scroll to top
-            </Link>
+            <ScrollToTop/>
           </li>
           <li>
             <Link
