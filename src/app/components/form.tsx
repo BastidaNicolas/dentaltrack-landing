@@ -24,15 +24,14 @@ export default function Form() {
             className="px-3 py-2 sm:py-3 border-black border-2 rounded-lg text-black mb-3 sm:mb-0 w-full max-w-xl mr-4"
             required
           />
-          <div className="relative bg-white font-bold text-base capitalize rounded-lg py-2 px-3 w-fit group">
-            Get_Notified
+          <div className="relative group">
             <button
               type="submit"
               className="z-10 absolute top-0 left-0 group-hover:-translate-x-1 group-hover:-translate-y-1 duration-75 bg-white font-bold text-base capitalize border-2 border-black rounded-lg py-2 px-5 text-black w-fit h-full truncate"
             >
               Get Notified
             </button>
-            <div className="z-0 absolute top-0 left-0 bg-black font-bold text-base capitalize border-2 border-black rounded-lg py-2 px-5 text-black w-fit h-full truncate">
+            <div className="z-0 bg-black font-bold text-base capitalize border-2 border-black rounded-lg py-2 px-5 text-black w-fit h-full truncate">
               Get Notified
             </div>
           </div>
