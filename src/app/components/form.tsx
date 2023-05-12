@@ -1,6 +1,6 @@
 export default function Form() {
   return (
-    <div className="px-3 lg:px-0 mb-24" id="form">
+    <div className="px-3 lg:px-0 mb-24 pt-24 md:pt-48" id="form">
       <div className="max-w-5xl m-auto bg-blue-500 border-black border-2 rounded-2xl text-white p-5 sm:py-8">
         <div className="font-bold text-3xl mb-4 sm:mb-8 sm:text-center">
           Stay up-to-date on DenalTrack’s launch!
