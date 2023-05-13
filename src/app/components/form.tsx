@@ -12,10 +12,10 @@ export default function Form() {
         body: JSON.stringify(data),
       })
         .then((response) => {
-          if (!response.ok) {
-            throw new Error(response.statusText);
-          }
-          return response.json();
+          // if (!response.ok) {
+            // throw new Error(response.statusText);
+            return response.json();
+          // }
         })
         .then((data) => {
           return data;
@@ -82,7 +82,7 @@ export default function Form() {
                 : "scale-0 -translate-y-10 opacity-0"
             } duration-200 bg-red-600 w-fit`}
           >
-            {postEmail.status}
+            {postEmail.isError ? (postEmail.error as any).message:''}
           </div>
         )}
         </form>
