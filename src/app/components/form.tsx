@@ -55,7 +55,7 @@ export default function Form() {
             className="px-3 py-2 sm:py-3 border-black border-2 rounded-lg text-black mb-3 sm:mb-0 w-full max-w-xl mr-4"
             required
           />
-          <div className="relative group">
+          <div className="relative group w-fit">
             <button
               type="submit"
               className="z-10 min-w-[130.33px] absolute top-0 left-0 group-active:translate-x-0 group-active:translate-y-0 group-hover:-translate-x-1 group-hover:-translate-y-1 duration-75 bg-white font-bold text-base capitalize border-2 border-black rounded-lg py-2 px-5 text-black w-fit h-full truncate"
