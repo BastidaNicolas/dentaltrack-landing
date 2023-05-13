@@ -82,7 +82,7 @@ export default function Form() {
                 : "scale-0 -translate-y-10 opacity-0"
             } duration-200 bg-red-600 w-fit`}
           >
-            {postEmail.error.message}
+            {(postEmail.error as any ).message}
           </div>
         )}
         </form>
