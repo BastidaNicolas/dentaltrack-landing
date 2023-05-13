@@ -12,15 +12,15 @@ export default function Form() {
         body: JSON.stringify(data),
       })
         .then((response) => {
-          //  
+          if (!response.ok) {
+            return response.json().then((data) => {
+              throw new Error(data.message);
+            });
+          }
           return response.json();
         })
         .then((data) => {
           return data;
-        })
-        .catch((error) => {
-          console.log(error);
-          throw new Error(error.message);
         });
     },
   });
@@ -67,28 +67,28 @@ export default function Form() {
             </div>
           </div>
           {postEmail.isSuccess ? (
-          <div
-            className={`absolute md:left-[13%] lg:left-[13%] -bottom-[50%] sm:-bottom-[100%] text-base font-bold border-2 border-black rounded-lg px-2 py-1 m-auto mb-3 ${
-              postEmail.isSuccess
-                ? "scale-1 translate-y-0 opacity-100"
-                : "scale-0 -translate-y-10 opacity-0"
-            } duration-200 bg-green-600 w-fit`}
-          >
-            {postEmail.data.message}
-          </div>
-        ) : (
-          <div
-            className={`absolute md:left-[13%] lg:left-[13%] -bottom-[50%] sm:-bottom-[100%] text-base font-bold border-2 border-black rounded-lg px-2 py-1 m-auto mb-3 ${
-              postEmail.error
-                ? "scale-1 translate-y-0 opacity-100"
-                : "scale-0 -translate-y-10 opacity-0"
-            } duration-200 bg-red-600 w-fit`}
-          >
-            {postEmail.isError ? (postEmail.error as any).message:''}
-          </div>
-        )}
+            <div
+              className={`absolute md:left-[13%] lg:left-[13%] -bottom-[50%] sm:-bottom-[100%] text-base font-bold border-2 border-black rounded-lg px-2 py-1 m-auto mb-3 ${
+                postEmail.isSuccess
+                  ? "scale-1 translate-y-0 opacity-100"
+                  : "scale-0 -translate-y-10 opacity-0"
+              } duration-200 bg-green-600 w-fit`}
+            >
+              {postEmail.data.message}
+            </div>
+          ) : (
+            <div
+              className={`absolute md:left-[13%] lg:left-[13%] -bottom-[50%] sm:-bottom-[100%] text-base font-bold border-2 border-black rounded-lg px-2 py-1 m-auto mb-3 ${
+                postEmail.error
+                  ? "scale-1 translate-y-0 opacity-100"
+                  : "scale-0 -translate-y-10 opacity-0"
+              } duration-200 bg-red-600 w-fit`}
+            >
+              {postEmail.isError ? (postEmail.error as any).message : ""}
+            </div>
+          )}
         </form>
-        
+
         <div className="text-xs text-center">
           E-mail Will only be used to notify updates & launch date
         </div>
