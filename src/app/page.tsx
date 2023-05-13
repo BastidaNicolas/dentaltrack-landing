@@ -9,6 +9,7 @@ import TwoColSection from "./components/twoColSection";
 import XlCard from "./components/cards/xlCard";
 import think from "public/think.svg";
 import offices from "public/offices.svg";
+import QueryClientComponent from "./components/queryClientComponent";
 
 export default function Home() {
   return (
@@ -23,7 +24,11 @@ export default function Home() {
             description:
               "With DentalTrack, managing appointments has never been easier. Our app allows dentists to schedule and reschedule appointments, mark them as completed, and track cancellations and no-shows, all in one place. Say goodbye to confusing schedules and missed appointments!",
           }}
-          colors={{ background: "bg-blue-500", mediaquery:"md:bg-blue-500", text: "text-white" }}
+          colors={{
+            background: "bg-blue-500",
+            mediaquery: "md:bg-blue-500",
+            text: "text-white",
+          }}
           image={think}
           reverse={false}
         />
@@ -33,7 +38,11 @@ export default function Home() {
             description:
               "DentalTrack is designed to adapt to the unique needs of each dental practice. Dentists can easily create custom offices and organize appointments based on location. This makes it easy to keep track of appoint-ments and ensure that everyone is on the same page.",
           }}
-          colors={{ background: "bg-neutral-100", mediaquery:"md:bg-neutral-100", text: "text-balck" }}
+          colors={{
+            background: "bg-neutral-100",
+            mediaquery: "md:bg-neutral-100",
+            text: "text-balck",
+          }}
           image={offices}
           reverse={true}
         />
@@ -41,7 +50,9 @@ export default function Home() {
       <TwoColSection />
       <CenterSection />
       <PaymentOptions />
-      <Form />
+      <QueryClientComponent>
+        <Form />
+      </QueryClientComponent>
       <Footer />
     </main>
   );
