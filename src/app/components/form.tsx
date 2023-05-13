@@ -19,6 +19,10 @@ export default function Form() {
         })
         .then((data) => {
           return data;
+        })
+        .catch((error) => {
+          console.log(error);
+          throw new Error(error.message);
         });
     },
   });
