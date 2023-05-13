@@ -7,15 +7,15 @@ export default function Hero() {
     <div className="border-b-2 border-b-black bg-blue-500 pt-12 md:pt-16 pb-8 md:pb-14 px-3 lg:px-0">
       <div className="max-w-5xl m-auto flex flex-wrap md:flex-nowrap items-center justify-end md:justify-between" >
         <div className="mb-8">
-          <div className="text-5xl lg:text-7xl font-bold text-neutral-50 mb-8 md:max-w-lg">
+          <div className="text-5xl lg:text-7xl font-bold text-neutral-100 mb-8 md:max-w-lg">
             Simplify patient appointment management.
           </div>
-          <p className="text-neutral-50 mb-5 text-base md:max-w-lg">
+          <p className="text-neutral-100 mb-5 text-base md:max-w-lg">
             DentalTrack helps dental practices efficiently manage their
             appointments and send reminders to patients, reducing missed
             appointments and increasing productivity.
           </p>
-          <div className="font-bold text-neutral-50 mb-5 text-base md:max-w-lg">
+          <div className="font-bold text-neutral-100 mb-5 text-base md:max-w-lg">
             Want to be notified when DentalTrack is available?
           </div>
           <NotifyBtn text={"Get Notified"} />
