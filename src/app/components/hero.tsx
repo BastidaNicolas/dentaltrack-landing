@@ -20,7 +20,7 @@ export default function Hero() {
           </div>
           <NotifyBtn text={"Get Notified"} />
         </div>
-        <Image src={MobileApp} alt="mobile app view" className="min-w-[80%] sm:min-w-[328px]" priority/>
+        <Image src={MobileApp} alt="mobile app view" className="min-w-[80%] sm:min-w-[328px]" priority quality={80} />
       </div>
     </div>
   );
