@@ -12,9 +12,7 @@ export default function Form() {
         body: JSON.stringify(data),
       })
         .then((response) => {
-          if (!response.ok) {
-            throw new Error(response.statusText);
-          }
+          //  
           return response.json();
         })
         .then((data) => {
