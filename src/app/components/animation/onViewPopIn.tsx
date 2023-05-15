@@ -3,8 +3,8 @@ import { Variants, motion } from "framer-motion";
 
 const cardVariants: Variants = {
   offscreen: {
-    scaleX:0,
-    scaleY: 0,
+    scaleX:0.8,
+    scaleY: 0.8,
   },
   onscreen: {
     scaleX: 1,
