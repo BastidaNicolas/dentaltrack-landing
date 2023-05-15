@@ -1,11 +1,11 @@
 import Link from "next/link";
 import NotifyBtn from "./notifyBtn";
-import OnLoadUpToDown from "./animation/onLoadUpToDown";
+import OnLoadFadeIn from "./animation/onLoadFadeIn";
 
 export default function Header() {
   return (
     <div className="border-b-2 border-b-black px-3 py-3 lg:px-0">
-      <OnLoadUpToDown>
+      <OnLoadFadeIn>
         <div className="max-w-4xl m-auto flex flex-wrap justify-between items-center">
           <div className="font-bold text-xl">DentalTrack</div>
           <div className="flex items-center">
@@ -24,7 +24,7 @@ export default function Header() {
             <NotifyBtn text={"get notified"} />
           </div>
         </div>
-      </OnLoadUpToDown>
+      </OnLoadFadeIn>
     </div>
   );
 }
