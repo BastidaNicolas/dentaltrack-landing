@@ -24,7 +24,7 @@ export default function OnViewDownToUp({ children }: any) {
       variants={cardVariants}
       initial="offscreen"
       whileInView="onscreen"
-      viewport={{ once: true, amount: 0.1 }}
+      viewport={{ once: true, amount: 0.3 }}
     >
       {children}
     </motion.div>
