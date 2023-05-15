@@ -3,8 +3,8 @@ import LgCard from "./cards/lgCard";
 
 export default function TwoColSection() {
   return (
-    <OnViewDownToUp>
-      <div className="grid grid-cols-1 px-3 lg:px-0 sm:grid-cols-2 gap-16 sm:gap-8 md:gap-16 max-w-5xl m-auto mb-24">
+    <div className="grid grid-cols-1 px-3 lg:px-0 sm:grid-cols-2 gap-16 sm:gap-8 md:gap-16 max-w-5xl m-auto mb-24">
+      <OnViewDownToUp>
         <LgCard
           title="Intelligent Patient Notifications"
           description="With DentalTrack, patients are automatically notified when an appointment is scheduled and when it's time to come in. Our app uses WhatsApp to send reminders, ensuring that patients never miss an appointment. This not only helps keep the schedule on track, but also leads to happier, healthier patients."
@@ -31,6 +31,8 @@ export default function TwoColSection() {
             </svg>
           }
         />
+      </OnViewDownToUp>
+      <OnViewDownToUp>
         <LgCard
           title="Comprehensive Appointment History"
           description="DentalTrack provides a complete history of all appointments, allowing dentists to quickly and easily review past sessions. Our app also makes it easy to search for specific patients and appointments, ensuring that all the information you need is right at your fingertips."
@@ -58,7 +60,7 @@ export default function TwoColSection() {
             </svg>
           }
         />
-      </div>
-    </OnViewDownToUp>
+      </OnViewDownToUp>
+    </div>
   );
 }
