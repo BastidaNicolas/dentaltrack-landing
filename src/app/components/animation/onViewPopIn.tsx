@@ -3,8 +3,8 @@ import { Variants, motion } from "framer-motion";
 
 const cardVariants: Variants = {
   offscreen: {
-    scaleX:0.8,
-    scaleY: 0.8,
+    scaleX:0.9,
+    scaleY: 0.9,
   },
   onscreen: {
     scaleX: 1,
@@ -12,7 +12,7 @@ const cardVariants: Variants = {
     // rotate: -10,
     transition: {
       type: "spring",
-      bounce: 0.3,
+      bounce: 0.5,
       duration: 0.6,
     },
   },
@@ -24,7 +24,7 @@ export default function OnViewPopIn({ children }: any) {
       variants={cardVariants}
       initial="offscreen"
       whileInView="onscreen"
-      viewport={{ once: true, amount: 0.1 }}
+      viewport={{ once: true, amount: 0.4 }}
     >
       {children}
     </motion.div>
