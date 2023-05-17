@@ -11,8 +11,8 @@ export async function POST(req: NextRequest) {
 
   if (!regex.test(body.email)) {
     return new NextResponse(
-      JSON.stringify({ message: "Email with incorrect format." }),
-      { status: 400, statusText:"Email with incorrect format.", headers: { "content-type": "application/json" } }
+      JSON.stringify({ message: "Email has incorrect formating." }),
+      { status: 400, statusText:"Email has incorrect formating.", headers: { "content-type": "application/json" } }
     );
   }
 

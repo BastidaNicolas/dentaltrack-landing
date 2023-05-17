@@ -64,7 +64,7 @@ export default function Form() {
             <div className="relative group w-fit">
               <button
                 type="submit"
-                className="z-10 min-w-[130.33px] absolute top-0 left-0 group-active:translate-x-0 group-active:translate-y-0 group-hover:-translate-x-1 group-hover:-translate-y-1 duration-75 bg-white font-bold text-base capitalize border-2 border-black rounded-lg py-2 px-5 text-black w-fit h-full truncate"
+                className="z-10 min-w-[130.33px] absolute top-0 left-0 group-active:translate-x-0 group-active:translate-y-0 -translate-x-1 -translate-y-1 duration-75 bg-white font-bold text-base capitalize border-2 border-black rounded-lg py-2 px-5 text-black w-fit h-full truncate"
               >
                 {postEmail.isLoading ? "Loading..." : "Get Notified"}
               </button>
@@ -95,8 +95,8 @@ export default function Form() {
             )}
           </form>
 
-          <div className="text-xs text-center">
-            E-mail Will only be used to notify updates & launch date
+          <div className="text-xs text-center capitalize">
+            E-mail Will Only Be used to notify updates & launch date
           </div>
         </div>
       </OnViewPopIn>
