@@ -1,0 +1,134 @@
+{
+  "hero": {
+    "title": "Simplify patient appointment management.",
+    "description": "DentalTrack helps dental practices efficiently manage their appointments and send reminders to patients, reducing missed appointments and increasing productivity.",
+    "question": "Want to be notified when DentalTrack is available?",
+    "button": "Get Notified"
+  },
+  "smCards": [
+    {
+      "title": "Manage Appointments",
+      "description": "Keep track of all your appointments in one place, create \"offices\" for each location and filter by status, date and patient name."
+    },
+    {
+      "title": "Automate Reminders",
+      "description": "Never forget an appointment again! Automatically sends reminders to your patients via WhatsApp, saving you the hassle of manual reminders."
+    },
+    {
+      "title": "Customize Tags",
+      "description": "Categorize your appointments by types. This makes it easy to see what type of appointment is coming up and what needs to be done."
+    },
+    {
+      "title": "Status Updates",
+      "description": "Easily reschedule appointments and mark them as done, canceled or no show. Keep track of patient history and stay on top."
+    },
+    {
+      "title": "Improved Productivity",
+      "description": "By reducing missed appointments and sending timely reminders, you'll increase patient loyalty and referrals."
+    },
+    {
+      "title": "Easy to Use",
+      "description": "With a user-friendly interface and intuitive design, you'll be up and running in no time. Even when you're on the go."
+    }
+  ],
+  "xlCard": [
+    {
+      "title": "Efficient Appointment Management",
+      "description": "With DentalTrack, managing appointments has never been easier. Our app allows dentists to schedule and reschedule appointments, mark them as completed, and track cancellations and no-shows, all in one place. Say goodbye to confusing schedules and missed appointments!"
+    },
+    {
+      "title": "Customizable Office Setup",
+      "description": "DentalTrack is designed to adapt to the unique needs of each dental practice. Dentists can easily create custom offices and organize appointments based on location. This makes it easy to keep track of appoint-ments and ensure that everyone is on the same page."
+    }
+  ],
+  "lgCard": [
+    {
+      "title": "Intelligent Patient Notifications",
+      "description": "With DentalTrack, patients are automatically notified when an appointment is scheduled and when it's time to come in. Our app uses WhatsApp to send reminders, ensuring that patients never miss an appointment. This not only helps keep the schedule on track, but also leads to happier, healthier patients."
+    },
+    {
+      "title": "Comprehensive Appointment History",
+      "description": "DentalTrack provides a complete history of all appointments, allowing dentists to quickly and easily review past sessions. Our app also makes it easy to search for specific patients and appointments, ensuring that all the information you need is right at your fingertips."
+    }
+  ],
+  "centerSection": {
+    "title": "Powerful Tagging System",
+    "description": "Our tagging system makes it easy to identify and manage appointments based on the services provided. Dentists can quickly see what kind of appointment is scheduled and what they need to do to prepare. This streamlines the entire process and ensures that everyone is on the same page."
+  },
+  "planSection": {
+    "title": "Choose You're Subscription Plan",
+    "buttons": {
+      "month": "monthly",
+      "year": "yearly"
+    },
+    "plans": {
+      "yearly": [
+        {
+          "title": "Starter Plan",
+          "price": "149,99",
+          "type": "Month",
+          "bulletPoints": [
+            "Appointment Scheduling",
+            "Patient Notification",
+            "Create Up To One Office",
+            "Appointment Tagging System",
+            "Appointment Status Updates",
+            "Appointment History Tracking And Filtering"
+          ]
+        },
+        {
+          "title": "Office+ Plan",
+          "price": "249,99",
+          "type": "Month",
+          "bulletPoints": [
+            "Everything In The Starter Plan",
+            "Create Multiple Offices",
+            "Exporting Data"
+          ]
+        },
+        {
+          "title": "Enterprise Plan",
+          "price": "**,**",
+          "type": "Month",
+          "bulletPoints": ["Currently Being Planned"]
+        }
+      ],
+      "monthly": [
+        {
+          "title": "Starter Plan",
+          "price": "14,99",
+          "type": "Month",
+          "bulletPoints": [
+            "Appointment Scheduling",
+            "Patient Notification",
+            "Create Up To One Office",
+            "Appointment Tagging System",
+            "Appointment Status Updates",
+            "Appointment History Tracking And Filtering"
+          ]
+        },
+        {
+          "title": "Office+ Plan",
+          "price": "24,99",
+          "type": "Month",
+          "bulletPoints": [
+            "Everything In The Starter Plan",
+            "Create Multiple Offices",
+            "Exporting Data"
+          ]
+        },
+        {
+          "title": "Enterprise Plan",
+          "price": "**,**",
+          "type": "Month",
+          "bulletPoints": ["Currently Being Planned"]
+        }
+      ]
+    },
+    "from": {
+      "title": "Stay up-to-date on DenalTrack’s launch!",
+      "button": "Get Notified",
+      "info": "E-mail Will only be used to notify updates & launch date"
+    }
+  }
+}
