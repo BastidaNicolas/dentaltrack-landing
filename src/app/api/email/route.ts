@@ -40,8 +40,8 @@ export async function POST(req: NextRequest) {
       if (count >= MAX_REQUESTS) {
         // If the request count exceeds the maximum, return a rate limit exceeded response
         return new NextResponse(
-          JSON.stringify({ message: "Rate limit exceeded. Please try again later." }),
-          { status: 429, statusText:"Rate limit exceeded. Please try again later.", headers: { "content-type": "application/json" } }
+          JSON.stringify({ message: "Try again in 60 seconds." }),
+          { status: 429, statusText:"Try again in 60 seconds.", headers: { "content-type": "application/json" } }
         );
       }
 
