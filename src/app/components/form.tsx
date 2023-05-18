@@ -1,8 +1,13 @@
 "use client";
 import { useMutation } from "@tanstack/react-query";
 import OnViewPopIn from "./animation/onViewPopIn";
+import { useState } from "react";
 
 export default function Form() {
+
+  const [email, setEmail] = useState<string>('')
+  const [formError, setFormError] = useState<string>('')
+
   const postEmail = useMutation({
     mutationFn: (data: any) => {
       return fetch("/api/email", {
@@ -26,17 +31,37 @@ export default function Form() {
     },
   });
 
-  const handleSubmit = (e: any) => {
-    e.preventDefault();
-    // console.log(e.target.elements.emailInput.value)
-    postEmail.mutate({ email: e.target.elements.emailInput.value });
+  const handleSubmit = (e:any) => {
+    e.preventDefault()
+    handleClientValidation();
   };
+
+  const handleClientValidation = () => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if(!email){
+      setFormError('Please enter your email.');
+      return;
+    }
+    if (!emailRegex.test(email)) {
+      setFormError('Email has incorrect formating.');
+      return;
+    }
+    postEmail.mutate({ email: email });
+    setFormError('');
+    return;
+  }
+
+  const handleMessageReset = () => {
+    postEmail.reset();
+    setFormError('');
+    return;
+  }
 
   return (
     <div
       id="form"
       className="px-3 lg:px-0 mb-24 pt-24 md:pt-48"
-      onClick={() => postEmail.reset()}
+      onClick={handleMessageReset}
     >
       <OnViewPopIn>
         <div className=" max-w-5xl m-auto bg-blue-500 border-black border-2 rounded-2xl text-white p-5 sm:py-8">
@@ -54,12 +79,14 @@ export default function Form() {
               email
             </label>
             <input
-              type="email"
+              type="text"
               name="emailInput"
               id="emailInput"
               placeholder="thisismyemail@email.com"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
               className="px-3 py-2 sm:py-3 border-black border-2 rounded-lg text-black mb-3 sm:mb-0 w-full max-w-xl mr-4"
-              required
+              // required
             />
             <div className="relative group w-fit">
               <button
@@ -76,8 +103,8 @@ export default function Form() {
               <div
                 className={`absolute md:left-[13%] lg:left-[13%] -bottom-[50%] sm:-bottom-[100%] text-base font-bold border-2 border-black rounded-lg px-2 py-1 m-auto mb-3 ${
                   postEmail.isSuccess
-                    ? "scale-1 translate-y-0 opacity-100"
-                    : "scale-0 -translate-y-10 opacity-0"
+                    ? "translate-y-0 opacity-100"
+                    : "-translate-y-10 opacity-0"
                 } duration-200 bg-green-600 w-fit`}
               >
                 {postEmail.data.message}
@@ -86,13 +113,24 @@ export default function Form() {
               <div
                 className={`absolute md:left-[13%] lg:left-[13%] -bottom-[50%] sm:-bottom-[100%] text-base font-bold border-2 border-black rounded-lg px-2 py-1 m-auto mb-3 ${
                   postEmail.error
-                    ? "scale-1 translate-y-0 opacity-100"
-                    : "scale-0 -translate-y-10 opacity-0"
+                    ? "translate-y-0 opacity-100"
+                    : "-translate-y-10 opacity-0"
                 } duration-200 bg-red-600 w-fit`}
               >
                 {(postEmail.error as any)?.message}
               </div>
             )}
+            {/* {formError && ( */}
+              <div
+                className={`absolute md:left-[13%] lg:left-[13%] -bottom-[50%] sm:-bottom-[100%] text-base font-bold border-2 border-black rounded-lg px-2 py-1 m-auto mb-3 ${
+                  formError
+                  ? "translate-y-0 opacity-100"
+                  : "-translate-y-10 opacity-0"
+                } duration-200 bg-red-600 w-fit`}
+              >
+                {formError}
+              </div>
+            {/* )} */}
           </form>
 
           <div className="text-xs text-center capitalize">
