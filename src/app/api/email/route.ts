@@ -15,8 +15,6 @@ const TIME_WINDOW = 1 * 60 * 1000; // Time window in milliseconds (e.g., 1 minut
 export async function POST(req: NextRequest) {
   const body = await req.json();
 
-  console.log(req.headers.get('x-forwarded-for') || req.ip)
-
   // Get the IP address of the client making the request
   const clientIP:any = req.headers.get('x-forwarded-for') || req.ip;
 
