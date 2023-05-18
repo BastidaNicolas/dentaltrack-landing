@@ -9,7 +9,7 @@ export default function Hero() {
       <OnLoadDownToUp>
       <div className="max-w-5xl m-auto flex flex-wrap md:flex-nowrap items-center justify-end md:justify-between" >
         <div className="mb-8">
-          <div className="text-5xl lg:text-7xl font-bold text-white mb-8 md:max-w-lg">
+          <div className="text-5xl lg:text-7xl font-bold text-white mb-8 md:max-w-xl capitalize">
             Simplify patient appointment management.
           </div>
           <p className="text-white mb-5 text-base md:max-w-lg">

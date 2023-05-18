@@ -26,6 +26,7 @@ const monthlyPlans = [
     features: [
       "Everything in the starter Plan",
       "Create multiple offices",
+      "Add colleagues to appointment, auto-notify them.",
       "Exporting data",
     ],
     disabled: true,
@@ -41,7 +42,7 @@ const monthlyPlans = [
 const yearlyPlans = [
   {
     title: "Starter Plan",
-    price: "149,99",
+    price: "142,99",
     type: "year",
     features: [
       "Appointment scheduling",
@@ -55,11 +56,12 @@ const yearlyPlans = [
   },
   {
     title: "Office+ Plan",
-    price: "249,99",
+    price: "238,99",
     type: "year",
     features: [
       "Everything in the starter Plan",
       "Create multiple offices",
+      "Add colleagues to appointment, auto-notify them.",
       "Exporting data",
     ],
     disabled: true,
