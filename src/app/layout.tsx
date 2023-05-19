@@ -18,7 +18,7 @@ export default function RootLayout({
     <html lang="en" className="">
       <head>
         <meta property="og:image" content="https://i.imgur.com/ytnzvzD.jpg" />
-        <meta property="og:url" content="https://dentaltrack.ar/" />
+        <meta property="og:url" content="https://www.dentaltrack.ar/" />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image"></meta>
         <meta
