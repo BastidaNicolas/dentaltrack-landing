@@ -1,3 +1,9 @@
+# DentalTrack.ar
+
+![www dentaltrack ar_](https://github.com/BastidaNicolas/dentaltrack-landing/assets/74965310/72e04158-fa3a-425e-b4b9-91bd5c9a38b4)
+
+
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
