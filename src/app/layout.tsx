@@ -17,10 +17,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="">
       <head>
-        
         <meta property="og:url" content="https://www.dentaltrack.ar/" />
-        <meta property="og:image" content="https://i.imgur.com/ytnzvzD.jpg" />
-        <meta property="og:image:type" content="image/jpg" />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image"></meta>
         <meta
@@ -43,6 +40,8 @@ export default function RootLayout({
           name="twitter:text:title"
           content="DentalTrack simplifies dental appointments scheduling and patient reminders, making it easy for dentists to manage their practice and provide top-notch patient care. Our cloud-based software enables dentists to create customizable appointment schedules, automate appointment reminders and securely store patient records. Sign up today and take your dental practice to the next level with DentalTrack."
         />
+        <meta property="og:image" content="https://i.imgur.com/ytnzvzD.jpg" />
+        <meta property="og:image:type" content="image/jpg" />
       </head>
       <body className={`${roboto.className}`}>{children}</body>
     </html>
