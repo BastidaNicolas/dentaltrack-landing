@@ -25,6 +25,7 @@ export default function OnViewDownToUp({ children }: any) {
       initial="offscreen"
       whileInView="onscreen"
       viewport={{ once: true, amount: 0.2 }}
+      className="w-full"
     >
       {children}
     </motion.div>
