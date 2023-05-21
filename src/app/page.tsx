@@ -10,12 +10,10 @@ import XlCard from "./components/cards/xlCard";
 import think from "public/think.svg";
 import offices from "public/offices.svg";
 import QueryClientComponent from "./components/queryClientComponent";
-import CookieModal from "./components/cookieModal";
 
 export default function Home() {
   return (
     <>
-      <CookieModal />
       <Header />
       <main className="">
         <Hero />

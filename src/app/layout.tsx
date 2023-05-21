@@ -1,4 +1,5 @@
 import GoogleAnalytics from "./components/GoogleAnalytics";
+import CookieModal from "./components/cookieModal";
 import "./globals.css";
 import { Roboto } from "next/font/google";
 
@@ -48,6 +49,7 @@ export default function RootLayout({
           content="DentalTrack simplifies dental appointments scheduling and patient reminders, making it easy for dentists to manage their practice and provide top-notch patient care. Our cloud-based software enables dentists to create customizable appointment schedules, automate appointment reminders and securely store patient records. Sign up today and take your dental practice to the next level with DentalTrack."
         />
       </head>
+      <CookieModal />
       <body className={`${roboto.className}`}>{children}</body>
     </html>
   );
