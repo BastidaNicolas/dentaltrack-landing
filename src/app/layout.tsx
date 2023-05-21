@@ -52,8 +52,8 @@ export default function RootLayout({
           name="twitter:text:title"
           content="DentalTrack simplifies dental appointments scheduling and patient reminders, making it easy for dentists to manage their practice and provide top-notch patient care. Our cloud-based software enables dentists to create customizable appointment schedules, automate appointment reminders and securely store patient records. Sign up today and take your dental practice to the next level with DentalTrack."
         />
+        <GoogleAnalytics GA_MEASUREMENT_ID="G-SMWYVD359M" />
       </head>
-      <GoogleAnalytics GA_MEASUREMENT_ID="G-SMWYVD359M" />
       <body className={`${roboto.className}`}>
         {children}
         <CookieModal />
