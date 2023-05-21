@@ -1,6 +1,4 @@
-import Image from "next/image";
 import NotifyBtn from "./notifyBtn";
-import MobileApp from "/public/mobile-app.svg";
 import OnLoadDownToUp from "./animation/onLoadDownToUp";
 
 export default function Hero() {
