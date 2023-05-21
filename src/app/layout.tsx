@@ -1,3 +1,4 @@
+import GoogleAnalytics from "./components/GoogleAnalytics";
 import "./globals.css";
 import { Roboto } from "next/font/google";
 
@@ -17,6 +18,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="">
+      <GoogleAnalytics GA_MEASUREMENT_ID="G-SMWYVD359M" />
       <head>
         <meta property="og:image" content="https://i.imgur.com/ELRu623.jpg" />
         <meta property="og:image:type" content="image/jpg" />
