@@ -55,11 +55,10 @@ export default function RootLayout({
       </head>
 
       <body className={`${roboto.className}`}>
-        <GoogleAnalytics GA_MEASUREMENT_ID="G-SMWYVD359M" />
-
         {children}
         <CookieModal />
       </body>
+      <GoogleAnalytics GA_MEASUREMENT_ID="G-SMWYVD359M" />
     </html>
   );
 }
