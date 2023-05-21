@@ -19,7 +19,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="">
       <head>
-        <meta property="og:image" content="https://i.imgur.com/ELRu623.jpg" />
+        <meta name="image" property="og:image" content="https://i.imgur.com/ELRu623.jpg"></meta>
         <meta property="og:image:type" content="image/jpg" />
         <meta
           property="og:title"
