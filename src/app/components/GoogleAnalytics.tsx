@@ -19,7 +19,7 @@ export default function GoogleAnalytics({
   }, [pathname, searchParams, GA_MEASUREMENT_ID]);
 
   return (
-    <>
+    <div>
       <Script
         strategy="afterInteractive"
         src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
@@ -43,6 +43,6 @@ export default function GoogleAnalytics({
                 `,
         }}
       />
-    </>
+    </div>
   );
 }
