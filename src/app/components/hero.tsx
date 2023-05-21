@@ -22,14 +22,17 @@ export default function Hero() {
             </div>
             <NotifyBtn text={"Get Notified"} />
           </div>
-          <Image
-            src={MobileApp}
-            alt="mobile app view"
-            className="min-w-[80%] sm:min-w-[328px]"
-            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-            priority={true}
-            quality={80}
-          />
+          <div className="relative w-auto min-h-[576px] min-w-[90%] sm:min-w-[328px]">
+            <Image
+              src={MobileApp}
+              alt="mobile app view"
+              className="object-contain"
+              fill
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+              priority={true}
+              quality={80}
+            />
+          </div>
         </div>
       </OnLoadDownToUp>
     </div>
