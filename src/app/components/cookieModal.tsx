@@ -26,7 +26,7 @@ export default function CookieModal() {
   return (
     <div
       className={`${
-        cookieConsent && "hidden"
+        cookieConsent != null && "hidden"
       } z-50 fixed bottom-2 w-full flex justify-center px-3 sm:px-0`}
     >
       <OnLoadDownToUp>
