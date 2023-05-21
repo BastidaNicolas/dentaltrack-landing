@@ -1,6 +1,6 @@
 import Image from "next/image";
 import NotifyBtn from "./notifyBtn";
-import MobileApp from "/public/mobile-app.svg";
+import MobileApp from "/public/mobile-app.webp";
 import OnLoadDownToUp from "./animation/onLoadDownToUp";
 
 export default function Hero() {
@@ -22,7 +22,14 @@ export default function Hero() {
             </div>
             <NotifyBtn text={"Get Notified"} />
           </div>
-          <Image src={MobileApp} alt="mobile app view" className="min-w-[80%] sm:min-w-[328px]" priority={true} quality={60} />
+          <Image
+            src={MobileApp}
+            alt="mobile app view"
+            className="min-w-[80%] sm:min-w-[328px]"
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            priority={true}
+            quality={80}
+          />
         </div>
       </OnLoadDownToUp>
     </div>
