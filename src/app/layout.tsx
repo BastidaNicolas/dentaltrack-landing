@@ -18,6 +18,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="">
+      <GoogleAnalytics GA_MEASUREMENT_ID="G-SMWYVD359M" />
+
       <head>
         <meta property="og:image" content="https://i.imgur.com/ELRu623.jpg" />
         <meta property="og:image:type" content="image/jpg" />
@@ -58,7 +60,6 @@ export default function RootLayout({
         {children}
         <CookieModal />
       </body>
-      <GoogleAnalytics GA_MEASUREMENT_ID="G-SMWYVD359M" />
     </html>
   );
 }
