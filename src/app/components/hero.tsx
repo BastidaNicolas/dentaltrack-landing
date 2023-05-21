@@ -28,9 +28,9 @@ export default function Hero() {
               alt="mobile app view"
               className="object-contain"
               fill
-              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 30vw"
               priority={true}
-              quality={80}
+              quality={75}
             />
           </div>
         </div>
