@@ -32,7 +32,7 @@ export default function CookieModal() {
       <OnLoadDownToUp>
         <div className="flex items-center flex-col sm:flex-row bg-white border-2 border-black rounded-lg capitalize px-4 py-2">
           <div className="sm:mr-10 text-lg mb-2 text-center sm:text-left sm:mb-0">
-            cookies for google analytics and to save your preference
+            cookies for google analytics & to save your preference
           </div>
           <div>
             <button
