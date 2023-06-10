@@ -152,6 +152,7 @@ export default function PaymentOptions() {
           {RenderCards(pantType)}
         </div>
       </OnViewDownToUp>
+      <div className="pt-5 font-bold capitalize px-2">displayed subscription plan pricing structure is subject to change prior launch date.</div>
     </div>
   );
 }
