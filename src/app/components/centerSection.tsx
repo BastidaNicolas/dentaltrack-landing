@@ -208,7 +208,7 @@ export default function CenterSection() {
           </svg>
           <div className="max-w-xl m-auto sm:text-center">
             <div className="font-bold text-3xl mb-5">
-              Powerful Tagging System
+              Powerfull Tagging System
             </div>
             <p className="text-base">
               Our tagging system makes it easy to identify and manage
