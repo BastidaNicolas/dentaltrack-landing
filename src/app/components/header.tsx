@@ -4,7 +4,7 @@ import OnLoadFadeIn from "./animation/onLoadFadeIn";
 
 export default function Header() {
   return (
-    <div className="bg-blue-600 px-3 py-4 lg:px-0">
+    <div className="bg-blue-600 py-3 md:py-2 px-3 xl:px-6 2xl:px-0">
       <OnLoadFadeIn>
         <div className="max-w-7xl m-auto flex flex-wrap justify-between items-center">
           <div className="flex items-center ">
@@ -65,7 +65,7 @@ export default function Header() {
               />
             </svg>
           </div>
-          <nav className="hidden sm:flex items-center">
+          <nav className="hidden md:flex items-center">
             <Link
               href={"/#features"}
               className="text-white font-bold mr-6 text-xl"
@@ -74,12 +74,88 @@ export default function Header() {
             </Link>
             <Link
               href={"/#pricing"}
-              className="text-white font-bold mr-12 text-xl"
+              className="text-white font-bold mr-6 text-xl"
             >
               Plans
             </Link>
+            <Link
+              href={"/"}
+              className="text-white font-bold mr-12 text-xl"
+            >
+              Blog
+            </Link>
             <NotifyBtn text={"get notified"} />
           </nav>
+          <div className="block md:hidden" >
+            <svg
+              width="39"
+              height="33"
+              viewBox="0 0 39 33"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <rect
+                x="3"
+                y="3"
+                width="35"
+                height="7"
+                rx="3.5"
+                fill="black"
+                stroke="black"
+                stroke-width="2"
+              />
+              <rect
+                x="3"
+                y="14"
+                width="35"
+                height="7"
+                rx="3.5"
+                fill="black"
+                stroke="black"
+                stroke-width="2"
+              />
+              <rect
+                x="3"
+                y="25"
+                width="35"
+                height="7"
+                rx="3.5"
+                fill="black"
+                stroke="black"
+                stroke-width="2"
+              />
+              <rect
+                x="1"
+                y="1"
+                width="35"
+                height="7"
+                rx="3.5"
+                fill="white"
+                stroke="black"
+                stroke-width="2"
+              />
+              <rect
+                x="1"
+                y="12"
+                width="35"
+                height="7"
+                rx="3.5"
+                fill="white"
+                stroke="black"
+                stroke-width="2"
+              />
+              <rect
+                x="1"
+                y="23"
+                width="35"
+                height="7"
+                rx="3.5"
+                fill="white"
+                stroke="black"
+                stroke-width="2"
+              />
+            </svg>
+          </div>
         </div>
       </OnLoadFadeIn>
     </div>
