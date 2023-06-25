@@ -2,7 +2,7 @@ import OnViewPopIn from "./animation/onViewPopIn";
 
 export default function CenterSection() {
   return (
-    <div className="relative border-y-2 border-y-black bg-blue-500 text-white px-3 lg:px-0 pt-9 pb-14 md:py-20">
+    <div className="relative border-y-2 border-y-black bg-blue-600 text-white px-3 lg:px-0 pt-9 pb-14 md:py-20">
       <OnViewPopIn>
         <div className="relative z-10 max-w-5xl m-auto flex">
           <svg

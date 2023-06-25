@@ -9,7 +9,7 @@ export default function TwoColSection() {
           title="Intelligent Patient Notifications"
           description="With DentalTrack, patients are automatically notified when an appointment is scheduled and when it's time to come in. Our app uses WhatsApp to send reminders, ensuring that patients never miss an appointment. This not only helps keep the schedule on track, but also leads to happier, healthier patients."
           colors={{
-            primary: "bg-blue-500",
+            primary: "bg-blue-600",
             secondary: "bg-white",
             text: "text-white",
           }}
@@ -38,7 +38,7 @@ export default function TwoColSection() {
           description="DentalTrack provides a complete history of all appointments, allowing dentists to quickly and easily review past sessions. Our app also makes it easy to search for specific patients and appointments, ensuring that all the information you need is right at your fingertips."
           colors={{
             primary: "bg-neutral-100",
-            secondary: "bg-blue-500",
+            secondary: "bg-blue-600",
             text: "text-balck",
           }}
           icon={

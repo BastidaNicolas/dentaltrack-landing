@@ -26,8 +26,8 @@ export default function Home() {
                 "With DentalTrack, managing appointments has never been easier. Our app allows dentists to schedule and reschedule appointments, mark them as completed, and track cancellations and no-shows, all in one place. Say goodbye to confusing schedules and missed appointments!",
             }}
             colors={{
-              background: "bg-blue-500",
-              mediaquery: "md:bg-blue-500",
+              background: "bg-blue-600",
+              mediaquery: "md:bg-blue-600",
               text: "text-white",
             }}
             image={think}

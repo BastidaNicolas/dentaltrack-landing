@@ -5,7 +5,7 @@ import OnLoadDownToUp from "./animation/onLoadDownToUp";
 
 export default function Hero() {
   return (
-    <div className="border-b-2 border-b-black bg-blue-500 pt-12 md:pt-16 pb-8 md:pb-14 px-3 lg:px-0">
+    <div className="border-b-2 border-b-black bg-blue-600 pt-12 md:pt-16 pb-8 md:pb-14 px-3 lg:px-0">
       <OnLoadDownToUp>
         <div className="max-w-5xl m-auto flex flex-wrap md:flex-nowrap items-center justify-end md:justify-between">
           <div className="mb-8">
