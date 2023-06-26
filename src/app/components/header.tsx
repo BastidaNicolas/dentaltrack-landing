@@ -115,9 +115,10 @@ export default function Header() {
               </div>
             </div>
           </nav>
-          <div
+          <button
             className="z-30 block md:hidden hover:cursor-pointer"
             onClick={() => setMenuOpen(!menuOpen)}
+            aria-label="open menu"
           >
             <svg
               width="39"
@@ -187,7 +188,7 @@ export default function Header() {
                 stroke-width="2"
               />
             </svg>
-          </div>
+          </button>
         </div>
       </OnLoadFadeIn>
     </div>
