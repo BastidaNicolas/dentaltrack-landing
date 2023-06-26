@@ -80,7 +80,7 @@ export default function Header() {
           <nav
             className={`${
               menuOpen ? "opacity-100" : "opacity-0 hidden"
-            } transition-all duration-300 md:transition-none md:duration-0 z-20 fixed md:relative top-0 left-0 w-full md:w-auto h-screen md:h-auto bg-blue-600 flex flex-col md:flex-row md:items-center pt-16 md:pt-0 overflow-y-auto`}
+            } transition-all duration-300 md:transition-none md:duration-0 z-20 fixed md:relative top-0 left-0 w-full md:w-auto h-full md:h-auto bg-blue-600 flex flex-col md:flex-row md:items-center pt-16 md:pt-0 overflow-y-auto`}
           >
             <Link
               href={"/#features"}
