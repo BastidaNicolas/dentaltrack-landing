@@ -2,7 +2,7 @@
 import Link from "next/link";
 import NotifyBtn from "./notifyBtn";
 import OnLoadFadeIn from "./animation/onLoadFadeIn";
-import { useContext, useEffect } from "react";
+import { useContext } from "react";
 import { IsMenuOpenContext } from "../lib/context";
 
 export default function Header() {
