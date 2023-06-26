@@ -23,7 +23,7 @@ export default function Hero() {
               <div className="font-bold text-white mb-5 text-base md:max-w-lg">
                 Want to be notified when DentalTrack is available?
               </div>
-              <NotifyBtn text={"Get Notified"} />
+              <NotifyBtn text={"Get Notified"} style="" />
             </div>
             <div className="relative w-auto min-h-[576px] min-w-[90%] sm:min-w-[328px]">
               <Image

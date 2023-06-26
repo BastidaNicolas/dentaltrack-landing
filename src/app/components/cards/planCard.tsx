@@ -45,7 +45,7 @@ export default function PlanCard({ content }: PlanCardType) {
                 <li key={index}>{item}</li>
               ))}
             </ul>
-            <NotifyBtn text="get notified" />
+            <NotifyBtn text="get notified" style="" />
           </div>
           <div className=" bg-black border-2 border-black py-6 px-5 rounded-2xl w-full min-h-[395px]">
             <div className="font-bold text-3xl capitalize mb-4">
