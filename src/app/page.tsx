@@ -13,7 +13,7 @@ import QueryClientComponent from "./components/queryClientComponent";
 export default function Home() {
   return (
     <>
-      <main className="">
+      <main>
         <Hero />
         <GridSection />
         <div className="max-w-5xl m-auto mb-24 px-3 lg:px-0">

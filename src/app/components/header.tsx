@@ -1,13 +1,25 @@
+"use client";
 import Link from "next/link";
 import NotifyBtn from "./notifyBtn";
 import OnLoadFadeIn from "./animation/onLoadFadeIn";
+import { useContext, useEffect } from "react";
+import { IsMenuOpenContext } from "../lib/context";
 
 export default function Header() {
+  const { menuOpen, setMenuOpen }: any = useContext(IsMenuOpenContext);
+
+  const handleClick = () => {
+    if (window.innerWidth <= 768) {
+      return setMenuOpen(false);
+    }
+    return;
+  };
+
   return (
-    <div className="bg-blue-600 py-3 md:py-2 px-3 xl:px-6 2xl:px-0">
+    <div className="bg-blue-600 py-3 md:py-2 px-3 xl:px-6 2xl:px-0 relative">
       <OnLoadFadeIn>
         <div className="max-w-7xl m-auto flex flex-wrap justify-between items-center">
-          <div className="flex items-center ">
+          <div className="flex items-center z-30">
             <svg
               width="2869"
               height="512"
@@ -65,28 +77,48 @@ export default function Header() {
               />
             </svg>
           </div>
-          <nav className="hidden md:flex items-center">
+          <nav
+            className={`${
+              menuOpen ? "opacity-100" : "opacity-0 hidden"
+            } transition-all duration-300 md:transition-none md:duration-0 z-20 fixed md:relative top-0 left-0 w-full md:w-auto h-screen md:h-auto bg-blue-600 flex flex-col md:flex-row md:items-center pt-16 md:pt-0 overflow-y-auto`}
+          >
             <Link
               href={"/#features"}
-              className="text-white font-bold mr-6 text-xl"
+              className="text-white font-bold md:mr-6 text-xl p-3 md:p-0 border-t-2 md:border-t-0"
+              onClick={handleClick}
             >
               Features
             </Link>
             <Link
               href={"/#pricing"}
-              className="text-white font-bold mr-6 text-xl"
+              className="text-white font-bold md:mr-6 text-xl p-3 md:p-0 border-y-2 md:border-y-0 border-dotted"
+              onClick={handleClick}
             >
               Plans
             </Link>
             <Link
               href={"/"}
-              className="text-white font-bold mr-12 text-xl"
+              className="text-white font-bold md:mr-12 text-xl p-3 md:p-0 border-b-2 md:border-y-0 border-dotted"
+              onClick={handleClick}
             >
               Blog
             </Link>
-            <NotifyBtn text={"get notified"} />
+            <div className="flex flex-col flex-grow justify-end p-3 md:p-0.5">
+              <div className="capitalize text-white font-bold text-lg text-center mb-2 md:hidden">
+                Want to be notified?
+              </div>
+              <div onClick={handleClick}>
+                <NotifyBtn
+                  text={"get notified"}
+                  style="md:w-fit w-full text-center"
+                />
+              </div>
+            </div>
           </nav>
-          <div className="block md:hidden" >
+          <div
+            className="z-30 block md:hidden hover:cursor-pointer"
+            onClick={() => setMenuOpen(!menuOpen)}
+          >
             <svg
               width="39"
               height="33"
