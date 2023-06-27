@@ -4,7 +4,7 @@ import CookieModal from "./components/cookieModal";
 import "./globals.css";
 import { Roboto } from "next/font/google";
 
-const roboto = Roboto({ subsets: ["latin"], weight: ["400", "500", "700"] });
+const roboto = Roboto({ subsets: ["latin"], weight: ["400", "500", "700", "900"] });
 
 export const metadata = {
   title: "DentalTrack - Simplify Your Dental Appointment Scheduling",
