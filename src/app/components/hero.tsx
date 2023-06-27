@@ -9,7 +9,7 @@ export default function Hero() {
       <Header />
       <div className="border-b-2 border-b-black bg-blue-600 pt-6 md:pt-16 pb-8 md:pb-16 px-3 lg:px-0">
           <div className="relative w-full max-w-7xl m-auto flex flex-wrap md:px-3 xl:px-6 2xl:px-0 md:flex-nowrap justify-end md:justify-between">
-            <div className="mb-14 sm:mb-16 w-full z-10 ">
+            <div className="mb-10 sm:mb-16 w-full z-10 ">
               <div className="leading-none max-w-2xl text-[clamp(48px,_13vw,_96px)] md:text-[clamp(72px,_7.8vw,_96px)] font-extrabold drop-shadow-[0_4px_0_#141414] sm:drop-shadow-[0_4px_0_#141414] tracking-[-0.016em] text-white mb-8 text-outline">
                 Simplify patient appointment management.
               </div>
