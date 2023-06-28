@@ -30,3 +30,10 @@ html {
   --scroll-behavior: smooth!important;
   scroll-behavior: smooth!important;
   }
+
+  .text-outline{
+    --text-border-width: 2px;
+    -webkit-text-fill-color: #fff;
+    -webkit-text-stroke-width: var(--text-border-width);
+    -webkit-text-stroke-color: #000;
+  }
