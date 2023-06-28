@@ -2,6 +2,8 @@ import Image from "next/image";
 import NotifyBtn from "./notifyBtn";
 import MobileApp from "/public/mobile-app.webp";
 import Header from "./header";
+import OnViewLeftMessage from "./animation/onViewLeftMessage";
+
 
 export default function Hero() {
   return (
@@ -9,7 +11,7 @@ export default function Hero() {
       <Header />
       <div className="border-b-2 border-b-black bg-blue-600 pt-6 md:pt-16 pb-8 md:pb-16 px-3 lg:px-0">
         <div className="relative w-full max-w-7xl m-auto flex flex-wrap md:px-3 xl:px-6 2xl:px-0 md:flex-nowrap justify-end md:justify-between">
-          <div className="mb-10 sm:mb-16 w-full z-20 ">
+          <div className="mb-10 sm:mb-16 w-full z-20">
             <div className="leading-none max-w-2xl text-[clamp(48px,_13vw,_96px)] md:text-[clamp(72px,_7.8vw,_96px)] font-extrabold drop-shadow-[0_4px_0_#141414] sm:drop-shadow-[0_4px_0_#141414] tracking-[-0.016em] text-white mb-8 text-outline">
               Simplify patient appointment management.
             </div>
@@ -24,21 +26,10 @@ export default function Hero() {
             <NotifyBtn text={"Get Notified"} style="" />
           </div>
           <div className="relative md:absolute md:right-0 md:top-0 h-[clamp(400px,_100vw,_576px)] md:h-full w-[500px] md:w-[clamp(72px,_28vw,_328px)]">
-            <div className="" >
-              <div className="absolute z-10 bg-green-400 text-base border-black border-2 rounded-lg max-w-[300px] py-2 px-4 md:-left-60 bottom-80">
-                Hey, I want a thing to get my tooth checked bro!
-              </div>
-              <div className="absolute z-10 bg-neutral-100 border-black border-2 rounded-lg max-w-[300px] py-2 px-4 left-8 md:-left-40 bottom-60">
-                K bro. I've got for tomorrow at 13 or at 18
-              </div>
-              <div className="absolute z-10 bg-green-400 border-black border-2 rounded-lg max-w-[300px] py-2 px-4  md:-left-60 bottom-44">
-                18 sounds good!
-              </div>
-              <div className="absolute z-10 bg-neutral-100 border-black border-2 rounded-lg max-w-[300px] py-2 px-4 left-8 md:-left-40 bottom-16">
-                K bro. I've got for tomorrow at 13 and at 18. Does one of these
-                fit your schedule?
-              </div>
-            </div>
+            <OnViewLeftMessage style="absolute z-10 bottom-6">
+              
+            </OnViewLeftMessage>
+
             <div className="h-[clamp(400px,_100vw,_576px)] md:h-full w-[clamp(72px,_50vw,_328px)] md:w-[clamp(72px,_28vw,_328px)]">
               <Image
                 src={MobileApp}
