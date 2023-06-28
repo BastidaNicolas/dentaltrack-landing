@@ -1,7 +1,6 @@
 "use client";
 import Link from "next/link";
 import NotifyBtn from "./notifyBtn";
-import OnLoadFadeIn from "./animation/onLoadFadeIn";
 import { useContext } from "react";
 import { IsMenuOpenContext } from "../lib/context";
 
@@ -9,7 +8,7 @@ export default function Header() {
   const { menuOpen, setMenuOpen }: any = useContext(IsMenuOpenContext);
 
   const handleClick = () => {
-    if (window.innerWidth <= 768) {
+    if (window.innerWidth < 768) {
       return setMenuOpen(false);
     }
     return;
@@ -17,9 +16,8 @@ export default function Header() {
 
   return (
     <div className="bg-blue-600 py-3 md:py-2 px-3 xl:px-6 2xl:px-0 relative">
-      <OnLoadFadeIn>
         <div className="max-w-7xl m-auto flex flex-wrap justify-between items-center">
-          <div className="flex items-center z-30">
+          <div className="flex items-center z-40">
             <svg
               width="2869"
               height="512"
@@ -79,8 +77,8 @@ export default function Header() {
           </div>
           <nav
             className={`${
-              menuOpen ? "opacity-100" : "opacity-0 hidden"
-            } transition-all duration-300 md:transition-none md:duration-0 z-20 fixed md:relative top-0 left-0 w-full md:w-auto h-full md:h-auto bg-blue-600 flex flex-col md:flex-row md:items-center pt-16 md:pt-0 overflow-y-auto`}
+              menuOpen ? "animate-fade-in" : "animate-fade-out"
+            } md:transition-none md:duration-0 z-30 fixed md:relative top-0 left-0 w-full md:w-auto h-full md:h-auto bg-blue-600 flex flex-col md:flex-row md:items-center pt-16 md:pt-0 overflow-y-auto`}
           >
             <Link
               href={"/#features"}
@@ -116,7 +114,7 @@ export default function Header() {
             </div>
           </nav>
           <button
-            className="z-30 block md:hidden hover:cursor-pointer"
+            className="z-40 block md:hidden hover:cursor-pointer"
             onClick={() => setMenuOpen(!menuOpen)}
             aria-label="open menu"
           >
@@ -190,7 +188,6 @@ export default function Header() {
             </svg>
           </button>
         </div>
-      </OnLoadFadeIn>
     </div>
   );
 }
