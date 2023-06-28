@@ -8,29 +8,29 @@ export default function ContextWraper({
 }: {
   children: React.ReactNode;
 }) {
-  const [menuOpen, setMenuOpen] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(true);
   const menuOpenMemo: any = useMemo(
     () => ({ menuOpen, setMenuOpen }),
     [menuOpen]
   );
 
   useEffect(() => {
-    if (window.innerWidth > 768) {
-      setMenuOpen(true);
+    if (window.innerWidth < 768) {
+      setMenuOpen(false);
     }
     window.addEventListener("resize", () => {
-      if (window.innerWidth > 768) {
+      if (window.innerWidth >= 768) {
         setMenuOpen(true);
       }
-      if (window.innerWidth <= 768) {
+      if (window.innerWidth < 768) {
         setMenuOpen(false);
       }
     });
     return window.removeEventListener("resize", () => {
-      if (window.innerWidth > 768) {
+      if (window.innerWidth >= 768) {
         setMenuOpen(true);
       }
-      if (window.innerWidth <= 768) {
+      if (window.innerWidth < 768) {
         setMenuOpen(false);
       }
     });
