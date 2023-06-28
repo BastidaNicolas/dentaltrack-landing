@@ -34,7 +34,7 @@ export default function ContextWraper({
         setMenuOpen(false);
       }
     });
-  }, []);
+  }, [window]);
 
   return (
     <IsMenuOpenContext.Provider value={menuOpenMemo}>
