@@ -37,7 +37,7 @@ const childrenVar: Variants = {
   },
 };
 
-export default function OnViewLeftMessage({
+export default function OnViewChat({
   children,
   style,
 }: {
@@ -60,22 +60,21 @@ export default function OnViewLeftMessage({
       </motion.div>
       <motion.div
         variants={childrenVar}
-        className="absolute z-10 bg-neutral-100 border-black border-2 rounded-lg max-w-[300px] py-2 px-4 left-8 md:-left-40 bottom-60"
+        className="absolute z-10 bg-neutral-100 border-black border-2 rounded-lg max-w-[300px] py-2 px-4 left-8 md:-left-40 bottom-52"
       >
-        Hi, I only have space tomorrow at 13
+        Hi, we have an opening at 3:15 PM on Thursday. Would that work for you?
       </motion.div>
       <motion.div
         variants={childrenVar}
-        className="absolute z-10 bg-green-400 border-black border-2 rounded-lg max-w-[300px] py-2 px-4  md:-left-60 bottom-44"
+        className="absolute z-10 bg-green-400 border-black border-2 rounded-lg max-w-[300px] py-2 px-4  md:-left-60 bottom-36"
       >
-        13 sounds good! 👍
+        That sounds perfect! 👍
       </motion.div>
       <motion.div
         variants={childrenVar}
-        className="absolute z-10 bg-neutral-100 border-black border-2 rounded-lg max-w-[300px] py-2 px-4 left-8 md:-left-40 bottom-6"
+        className="absolute z-10 bg-neutral-100 border-black border-2 rounded-lg max-w-[300px] py-2 px-4 left-8 md:-left-40 bottom-2"
       >
-        You have scheduled an opointment for tooth fixing with Dr.Peter for
-        Monday 26, January 2023 at 13:00 hs.
+        Appointment scheduled with Dr. Peter for tooth repair on Thursday, January 26, 2090, at 3:15 PM.
         <br />- DentalTrack
       </motion.div>
     </motion.div>

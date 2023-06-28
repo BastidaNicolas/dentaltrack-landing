@@ -2,7 +2,7 @@ import Image from "next/image";
 import NotifyBtn from "./notifyBtn";
 import MobileApp from "/public/mobile-app.webp";
 import Header from "./header";
-import OnViewLeftMessage from "./animation/onViewLeftMessage";
+import OnViewChat from "./animation/onViewChat";
 
 
 export default function Hero() {
@@ -26,10 +26,7 @@ export default function Hero() {
             <NotifyBtn text={"Get Notified"} style="" />
           </div>
           <div className="relative md:absolute md:right-0 md:top-0 h-[clamp(400px,_100vw,_576px)] md:h-full w-[500px] md:w-[clamp(72px,_28vw,_328px)]">
-            <OnViewLeftMessage style="absolute z-10 bottom-6">
-              
-            </OnViewLeftMessage>
-
+            <OnViewChat style="absolute z-10 bottom-6 md:hidden lg:block"/>
             <div className="h-[clamp(400px,_100vw,_576px)] md:h-full w-[clamp(72px,_50vw,_328px)] md:w-[clamp(72px,_28vw,_328px)]">
               <Image
                 src={MobileApp}
