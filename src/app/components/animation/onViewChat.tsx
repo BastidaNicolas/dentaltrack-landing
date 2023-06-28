@@ -38,10 +38,8 @@ const childrenVar: Variants = {
 };
 
 export default function OnViewChat({
-  children,
   style,
 }: {
-  children: React.ReactNode;
   style: string;
 }) {
   return (
