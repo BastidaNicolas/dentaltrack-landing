@@ -78,7 +78,7 @@ export default function Header() {
           <nav
             className={`${
               menuOpen ? "animate-fade-in" : "animate-fade-out"
-            } transition-all duration-300 md:transition-none md:duration-0 z-30 fixed md:relative top-0 left-0 w-full md:w-auto h-full md:h-auto bg-blue-600 flex flex-col md:flex-row md:items-center pt-16 md:pt-0 overflow-y-auto`}
+            } md:transition-none md:duration-0 z-30 fixed md:relative top-0 left-0 w-full md:w-auto h-full md:h-auto bg-blue-600 flex flex-col md:flex-row md:items-center pt-16 md:pt-0 overflow-y-auto`}
           >
             <Link
               href={"/#features"}
