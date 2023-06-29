@@ -35,7 +35,6 @@ export default function Home() {
           />
         </div>
         <TwoColSection />
-        <CenterSection />
         <PaymentOptions />
         <QueryClientComponent>
           <Form />
