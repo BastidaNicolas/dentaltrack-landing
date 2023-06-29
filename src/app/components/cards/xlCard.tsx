@@ -25,10 +25,10 @@ export default function XlCard({
         />
       </div>
       <div className="lg:sticky lg:top-0 h-fit">
-        <div className="capitalize font-bold text-5xl mb-6">
+        <div className="capitalize font-bold text-3xl sm:text-5xl mb-6">
           {content.title}
         </div>
-        <p className="text-2xl">
+        <p className="text-lg sm:text-2xl">
           {content.description}
         </p>
       </div>
