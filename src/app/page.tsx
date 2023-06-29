@@ -6,8 +6,6 @@ import PaymentOptions from "./components/paymentOptions";
 import CenterSection from "./components/centerSection";
 import TwoColSection from "./components/twoColSection";
 import XlCard from "./components/cards/xlCard";
-import think from "public/think.svg";
-import offices from "public/offices.svg";
 import QueryClientComponent from "./components/queryClientComponent";
 
 export default function Home() {
