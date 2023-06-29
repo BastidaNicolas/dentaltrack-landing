@@ -16,19 +16,14 @@ export default function Home() {
       <main>
         <Hero />
         <GridSection />
-        <div className="max-w-5xl m-auto mb-24 px-3 lg:px-0">
+        <div className="max-w-7xl m-auto mb-24 px-3 xl:px-6 2xl:px-0">
           <XlCard
             content={{
               title: "Efficient Appointment Management",
               description:
-                "With DentalTrack, managing appointments has never been easier. Our app allows dentists to schedule and reschedule appointments, mark them as completed, and track cancellations and no-shows, all in one place. Say goodbye to confusing schedules and missed appointments!",
+                "Say goodbye to confusing schedules and missed appointments! Dentists can schedule and reschedule appointments, mark them as completed, and track cancellations and no-shows, all in one place.",
             }}
-            colors={{
-              background: "bg-blue-600",
-              mediaquery: "md:bg-blue-600",
-              text: "text-white",
-            }}
-            image={think}
+            image={"appointment-list.svg"}
             reverse={false}
           />
           <XlCard
@@ -37,12 +32,7 @@ export default function Home() {
               description:
                 "DentalTrack is designed to adapt to the unique needs of each dental practice. Dentists can easily create custom offices and organize appointments based on location. This makes it easy to keep track of appoint-ments and ensure that everyone is on the same page.",
             }}
-            colors={{
-              background: "bg-neutral-100",
-              mediaquery: "md:bg-neutral-100",
-              text: "text-balck",
-            }}
-            image={offices}
+            image={"office-list.svg"}
             reverse={true}
           />
         </div>
