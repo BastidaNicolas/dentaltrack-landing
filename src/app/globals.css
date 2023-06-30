@@ -37,3 +37,6 @@ html {
     -webkit-text-stroke-width: var(--text-border-width);
     -webkit-text-stroke-color: #000;
   }
+  .mask-this{
+    background-image: radial-gradient(circle at center center, var(rgb(71, 30, 30)) 50%, rgb(255, 255, 255, 0) 50%);
+  }
