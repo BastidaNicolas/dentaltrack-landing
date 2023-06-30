@@ -1,4 +1,4 @@
-import OnViewDownToUp from "./animation/onViewDownToUp";
+import OnViewAppHist from "./animation/onViewAppHist";
 import OnViewTaggin from "./animation/onViewTagging";
 import LgCard from "./cards/lgCard";
 
@@ -14,6 +14,7 @@ export default function TwoColSection() {
         <LgCard
           title="Comprehensive Appointment History"
           description="Our app also makes it easy to search for specific patients and appointments, ensuring that all the information you need is right at your fingertips."
+          icon={<OnViewAppHist/>}
         />
       </div>
     </>
