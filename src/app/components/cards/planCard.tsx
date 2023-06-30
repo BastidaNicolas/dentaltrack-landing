@@ -33,7 +33,7 @@ function DisabledPlanCard({ content }: PlanCardType) {
 
 export default function PlanCard({ content }: PlanCardType) {
   return (
-    <div className="max-w-[354px] w-full">
+    <div className="max-w-[354px] w-full place-self-center">
       {!content.disabled ? (
         <Link href={"#form"}>
           <div className="drop-shadow-[4px_4px_0px_#000000] active:drop-shadow-[0px_0px_0px_#000000] hover:cursor-pointer duration-100 min-h-[423px] bg-white border-4 border-black p-6 md:p-8 rounded-2xl h-full w-full">
