@@ -51,7 +51,7 @@ export default function OnViewTaggin() {
         variants={cardAnim}
         initial="offscreen"
         whileInView="onscreen"
-        viewport={{ once: true, amount: 0.3 }}
+        viewport={{ once: true, amount: 0.1 }}
         className="opacity-20 bg-white border-2 border-black rounded-lg flex w-11/12 sm:w-full max-w-[300px] sm:max-w-[400px] items-center justify-between p-2 sm:p-3 ml-2 mr-3 drop-shadow-[4px_4px_0px_#000000] mb-4"
       >
         <div className="truncate">
@@ -68,7 +68,7 @@ export default function OnViewTaggin() {
         variants={cardAnim}
         initial="offscreen"
         whileInView="onscreen"
-        viewport={{ once: true, amount: 0.3 }}
+        viewport={{ once: true, amount: 0.1 }}
         className="bg-white border-2 border-black rounded-lg flex w-11/12 sm:w-full max-w-[300px] sm:max-w-[400px] items-center justify-between p-2 sm:p-3 ml-2 mr-3 drop-shadow-[4px_4px_0px_#000000] mb-4"
       >
         <div className="truncate">
@@ -91,7 +91,7 @@ export default function OnViewTaggin() {
         variants={cardAnim}
         initial="offscreen"
         whileInView="onscreen"
-        viewport={{ once: true, amount: 0.3 }}
+        viewport={{ once: true, amount: 0.1 }}
         className="opacity-20 bg-white border-2 border-black rounded-lg flex w-11/12 sm:w-full max-w-[300px] sm:max-w-[400px] items-center justify-between p-2 sm:p-3 ml-2 mr-3 drop-shadow-[4px_4px_0px_#000000] mb-4"
       >
         <div className="truncate">
