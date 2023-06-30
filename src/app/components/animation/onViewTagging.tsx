@@ -14,7 +14,7 @@ const cardAnim: Variants = {
       //staggerChildren: 1,
       type: "just",
       bounce: 0,
-      duration: 0.3,
+      duration: 0.1,
     },
   },
 };
