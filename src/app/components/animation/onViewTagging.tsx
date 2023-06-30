@@ -39,7 +39,7 @@ const tagAnim: Variants = {
   },
 };
 
-export default function OnViewTaggin({ style }: { style: string }) {
+export default function OnViewTaggin() {
   return (
     <motion.div
       variants={cardAnim}
