@@ -1,4 +1,5 @@
 import OnViewDownToUp from "./animation/onViewDownToUp";
+import OnViewTaggin from "./animation/onViewTagging";
 import LgCard from "./cards/lgCard";
 
 export default function TwoColSection() {
@@ -8,6 +9,7 @@ export default function TwoColSection() {
         <LgCard
           title="Powerfull Tagging System"
           description="Identify and manage appointments based on the services provided. Dentists can quickly see what kind of appointment is scheduled and what they need to do to prepare."
+          icon={<OnViewTaggin/>}
         />
         <LgCard
           title="Comprehensive Appointment History"
