@@ -1,30 +1,32 @@
 type LgCardTypes = {
-    title:string,
-    description:string,
-    colors:{
-        secondary:string,
-        primary:string,
-        text:string
-    },
-    icon:any
-}
+  title: string;
+  description: string;
+  colors?: {
+    secondary: string;
+    primary: string;
+    text: string;
+  };
+  icon?: any;
+};
 
-export default function LgCard({title, description, colors, icon}: LgCardTypes) {
-    return (
-      <div className={`relative border-2 border-black ${colors.primary} px-8 sm:px-5 md:px-8 pb-9 sm:pb-6 pt-14 sm:pt-5 rounded-2xl h-full`}>
-        <div className={`font-bold mb-7 text-2xl ${colors.text} sm:max-w-[75%]`} >{title}</div>
-        <p className={`text-base sm:text-lg ${colors.text}`}>{description}</p>
-        <div className="absolute -top-9 sm:top-2 md:top-3 right-3 sm:right-1 md:right-3" >
-            <div className="relative">
-                <div className={`absolute -top-1 right-1 ${colors.secondary} p-2 rounded-2xl border-2 border-black`} >
-                    {icon}
-                </div>
-                <div className={`bg-black p-2 rounded-2xl border-2 border-black`} >
-                    {icon}
-                </div>
-            </div>
-        </div>
+export default function LgCard({
+  title,
+  description,
+  colors,
+  icon,
+}: LgCardTypes) {
+  return (
+    <div className="w-full border-4 border-black rounded-2xl bg-blue-600">
+      <div className="relative h-60 sm:h-[300px] bg-slate-100 rounded-t-xl flex justify-center items-center overflow-hidden">
+        {/*add animated svg*/}
+        {icon}
       </div>
-    );
-  }
-  
+      <div className="h-max p-4 sm:p-8 border-t-4 border-black rounded-b-xl text-white">
+        <div className="font-bold text-xl sm:text-4xl mb-3 sm:mb-4 capitalize">
+          {title}
+        </div>
+        <p className="text-base sm:text-2xl">{description}</p>
+      </div>
+    </div>
+  );
+}

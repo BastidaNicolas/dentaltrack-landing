@@ -3,7 +3,6 @@ import GridSection from "./components/gridSection";
 import Footer from "./components/footer";
 import Form from "./components/form";
 import PaymentOptions from "./components/paymentOptions";
-import CenterSection from "./components/centerSection";
 import TwoColSection from "./components/twoColSection";
 import XlCard from "./components/cards/xlCard";
 import QueryClientComponent from "./components/queryClientComponent";
@@ -14,7 +13,7 @@ export default function Home() {
       <main>
         <Hero />
         <GridSection />
-        <div className="max-w-7xl m-auto mb-24 px-3 xl:px-6 2xl:px-0">
+        <div className="max-w-7xl m-auto mb-12 md:mb-24 px-3 xl:px-6 2xl:px-0">
           <XlCard
             content={{
               title: "Efficient Appointment Management",
@@ -35,7 +34,6 @@ export default function Home() {
           />
         </div>
         <TwoColSection />
-        <CenterSection />
         <PaymentOptions />
         <QueryClientComponent>
           <Form />
