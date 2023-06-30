@@ -17,7 +17,7 @@ export default function LgCard({
 }: LgCardTypes) {
   return (
     <div className="w-full border-4 border-black rounded-2xl bg-blue-600">
-      <div className="relative h-60 sm:h-[300px] bg-slate-100 rounded-t-xl flex justify-center items-center mask-this overflow-hidden">
+      <div className="relative h-60 sm:h-[300px] bg-slate-100 rounded-t-xl flex justify-center items-center overflow-hidden">
         {/*add animated svg*/}
         {icon}
       </div>
