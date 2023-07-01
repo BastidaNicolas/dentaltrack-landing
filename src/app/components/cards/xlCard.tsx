@@ -25,7 +25,7 @@ export default function XlCard({
         />
       </div>
       <div className="lg:sticky lg:top-0 h-fit">
-        <div className="capitalize font-bold text-3xl sm:text-5xl mb-6">
+        <div className="capitalize font-bold text-3xl sm:text-5xl tracking-[-0.016em] mb-6">
           {content.title}
         </div>
         <p className="text-lg sm:text-2xl">

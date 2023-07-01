@@ -94,7 +94,7 @@ export default function PaymentOptions() {
       className="max-w-7xl m-auto flex flex-col items-center px-3 xl:px-6 2xl:px-0 pt-24 sm:pt-36"
       id="pricing"
     >
-      <div className="text-4xl sm:text-5xl text-center font-bold capitalize mb-9">
+      <div className="text-4xl sm:text-5xl text-center font-bold capitalize mb-9 tracking-[-0.016em]">
         Choose you're subscription plan
       </div>
       <div className="mb-7 flex sm:justify-center">

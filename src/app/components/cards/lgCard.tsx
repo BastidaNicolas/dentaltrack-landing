@@ -22,7 +22,7 @@ export default function LgCard({
         {icon}
       </div>
       <div className="h-max p-4 sm:p-8 border-t-4 border-black rounded-b-xl text-white">
-        <div className="font-bold text-xl sm:text-4xl mb-3 sm:mb-4 capitalize">
+        <div className="font-bold text-xl sm:text-4xl mb-3 sm:mb-4 capitalize tracking-[-0.016em]">
           {title}
         </div>
         <p className="text-base sm:text-2xl">{description}</p>
