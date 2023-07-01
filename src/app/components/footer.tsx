@@ -3,8 +3,8 @@ import ScrollToTop from "./scrollToTop";
 
 export default function Footer() {
   return (
-    <div className="bg-blue-600 border-t-2 border-black px-3 lg:px-0 sm:py-6 pt-8 pb-4 text-white text-base">
-      <div className="max-w-5xl m-auto flex flex-col sm:flex-row sm:justify-between sm:items-center">
+    <div className="bg-blue-600 border-t-2 border-black px-3 xl:px-6 2xl:px-0 sm:py-6 pt-8 pb-4 text-white text-base">
+      <div className="max-w-7xl m-auto flex flex-col sm:flex-row sm:justify-between sm:items-center">
         <ul className="sm:flex sm:items-center">
           <li>
             <ScrollToTop/>
@@ -25,6 +25,15 @@ export default function Footer() {
               scroll
             >
               pricing
+            </Link>
+          </li>
+          <li>
+            <Link
+              href={"/blog"}
+              className="block capitalize font-bold  mb-6 sm:mb-0 sm:mr-6"
+              scroll
+            >
+              blog
             </Link>
           </li>
         </ul>
