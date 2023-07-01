@@ -8,43 +8,37 @@ export default function ContextWraper({
 }: {
   children: React.ReactNode;
 }) {
-  const [menuOpen, setMenuOpen] = useState(true);
-  const [isMobile, setIsMobile] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
   const menuOpenMemo: any = useMemo(
     () => ({ menuOpen, setMenuOpen }),
     [menuOpen]
   );
 
   useEffect(() => {
-    if (window.innerWidth < 768) {
-      setMenuOpen(false);
-      setIsMobile(true);
-    }
+    // if (window.innerWidth >= 768) {
+    //   setMenuOpen(true);
+    // }
     window.addEventListener("resize", () => {
-      if (window.innerWidth >= 768) {
-        setMenuOpen(true);
-        setIsMobile(false);
-      }
+      // if (window.innerWidth >= 768) {
+      //   setMenuOpen(true);
+      // }
       if (window.innerWidth < 768) {
         setMenuOpen(false);
-        setIsMobile(true);
       }
     });
     return window.removeEventListener("resize", () => {
-      if (window.innerWidth >= 768) {
-        setMenuOpen(true);
-        setIsMobile(false);
-      }
+      // if (window.innerWidth >= 768) {
+      //   setMenuOpen(true);
+      // }
       if (window.innerWidth < 768) {
         setMenuOpen(false);
-        setIsMobile(true);
       }
     });
   }, []);
 
   return (
     <IsMenuOpenContext.Provider value={menuOpenMemo}>
-      <html lang="en" className={`${menuOpen && isMobile ? "overflow-y-hidden" : ""}`}>
+      <html lang="en" className={`${menuOpen ? "overflow-y-hidden" : ""}`}>
         {children}
       </html>
     </IsMenuOpenContext.Provider>
