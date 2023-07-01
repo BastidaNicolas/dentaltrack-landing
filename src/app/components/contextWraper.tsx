@@ -8,7 +8,7 @@ export default function ContextWraper({
 }: {
   children: React.ReactNode;
 }) {
-  const [menuOpen, setMenuOpen] = useState(true);
+  const [menuOpen, setMenuOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
   const menuOpenMemo: any = useMemo(
     () => ({ menuOpen, setMenuOpen }),
@@ -16,9 +16,9 @@ export default function ContextWraper({
   );
 
   useEffect(() => {
-    if (window.innerWidth < 768) {
-      setMenuOpen(false);
-      setIsMobile(true);
+    if (window.innerWidth >= 768) {
+      setMenuOpen(true);
+      setIsMobile(false);
     }
     window.addEventListener("resize", () => {
       if (window.innerWidth >= 768) {
