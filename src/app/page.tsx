@@ -10,7 +10,7 @@ import QueryClientComponent from "./components/queryClientComponent";
 export default function Home() {
   return (
     <>
-      <main>
+      <main style={{ top: "-650px", position: "sticky" }}>
         <Hero />
         <GridSection />
         <div className="max-w-7xl m-auto mb-12 md:mb-24 px-3 xl:px-6 2xl:px-0">
@@ -38,8 +38,8 @@ export default function Home() {
         <QueryClientComponent>
           <Form />
         </QueryClientComponent>
+        <Footer />
       </main>
-      <Footer />
     </>
   );
 }
