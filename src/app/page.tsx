@@ -7,13 +7,14 @@ import PaymentOptions from "./components/paymentOptions";
 import TwoColSection from "./components/twoColSection";
 import XlCard from "./components/cards/xlCard";
 import QueryClientComponent from "./components/queryClientComponent";
-import { useContext, useEffect, useRef } from "react";
+import { useContext, useEffect, useRef, useState } from "react";
 import { MainHeightContext } from "./lib/context";
 
 export default function Home() {
 
   const mainRef = useRef<HTMLDivElement>(null)
   const {mainHeight, setMainHeight} = useContext<any>(MainHeightContext)
+  const heroRef = useRef<any>(null)
 
   useEffect(() => {
     if(mainRef){
@@ -22,8 +23,8 @@ export default function Home() {
   },[mainRef])
 
   return (
-    <main ref={mainRef} style={{ top: "-650px", position: "sticky" }}>
-      <Hero />
+    <main ref={mainRef} style={{ top: `-${heroRef.current?.clientHeight * 0.9}px`, position: "sticky" }}>
+      <Hero heroRef={heroRef} />
       <GridSection />
       <div className="max-w-7xl m-auto mb-12 md:mb-24 px-3 xl:px-6 2xl:px-0">
         <XlCard

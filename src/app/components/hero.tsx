@@ -4,10 +4,10 @@ import MobileApp from "/public/mobile-app.webp";
 import Header from "./header";
 import OnViewChat from "./animation/onViewChat";
 
+export default function Hero({heroRef}:any) {
 
-export default function Hero() {
   return (
-    <>
+    <div ref={heroRef} >
       <Header />
       <div className="border-b-2 border-b-black bg-blue-600 pt-6 md:pt-16 pb-8 md:pb-16 px-3 lg:px-0">
         <div className="relative w-full max-w-7xl m-auto flex flex-wrap md:px-3 xl:px-6 2xl:px-0 md:flex-nowrap justify-end md:justify-between">
@@ -41,6 +41,6 @@ export default function Hero() {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }
