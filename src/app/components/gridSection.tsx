@@ -1,6 +1,6 @@
 "use client";
+import { useContext } from "react";
 import { motion, useTransform } from "framer-motion";
-import { useContext, useEffect } from "react";
 import { ScrollYProgressContext } from "../lib/context";
 
 export default function GridSection() {
@@ -8,69 +8,65 @@ export default function GridSection() {
 
   const titleOpacityA = useTransform(
     scrollYProgress,
-    [0, 0.01, 0.09, 0.1],
+    [0, 0.15, 0.29, 0.3],
     [0.6, 1, 1, 0.6]
   );
   const scaleA = useTransform(
     scrollYProgress,
-    [0, 0.01, 0.09, 0.1],
+    [0, 0.15, 0.29, 0.3],
     [0, 1, 1, 0],
     { clamp: false }
   );
 
   const titleOpacityB = useTransform(
     scrollYProgress,
-    [0.1, 0.11, 0.19, 0.2],
+    [0.3, 0.31, 0.39, 0.4],
     [0.6, 1, 1, 0.6]
   );
   const titleTranslateYB = useTransform(
     scrollYProgress,
-    [0.1, 0.11, 0.19, 0.2],
-    [50, -40, -40, -50]
+    [0.3, 0.31, 0.39, 0.4],
+    [70, -40, -40, -50]
   );
   const paragraphOpacityB = useTransform(
     scrollYProgress,
-    [0.105, 0.11, 0.19, 0.2],
+    [0.3, 0.31, 0.39, 0.4],
     [0, 1, 1, 0]
   );
   const paragraphTranslateYB = useTransform(
     scrollYProgress,
-    [0.1, 0.11, 0.19, 0.2],
+    [0.3, 0.31, 0.39, 0.4],
     [0, -40, -40, -50]
   );
 
   const titleOpacityC = useTransform(
     scrollYProgress,
-    [0.2, 0.21, 0.29, 0.3],
+    [0.4, 0.41, 0.49, 0.5],
     [0.6, 1, 1, 1]
   );
   const titleTranslateYC = useTransform(
     scrollYProgress,
-    [0.2, 0.21, 0.29, 0.3],
+    [0.4, 0.41, 0.49, 0.5],
     [0, -120, -120, -130]
   );
   const paragraphOpacityC = useTransform(
     scrollYProgress,
-    [0.205, 0.21, 0.29, 0.3],
+    [0.4, 0.41, 0.49, 0.5],
     [0, 1, 1, 1]
   );
   const paragraphTranslateYC = useTransform(
     scrollYProgress,
-    [0.2, 0.21, 0.29, 0.3],
+    [0.4, 0.41, 0.49, 0.5],
     [0, -120, -120, -130]
   );
 
-  useEffect(() => {
-    console.log(scrollYProgress);
-  }, [scrollYProgress]);
-
   return (
     <div
-      className="px-3 xl:px-6 2xl:px-0 pt-24 pb-24 md:pb-48 lg:px-0 "
+      className="px-3 xl:px-6 2xl:px-0 my-24 "
       id="features"
     >
       <div className="max-w-7xl m-auto border-2 border-black rounded-2xl bg-neutral-100 p-9 pb-0 drop-shadow-[8px_8px_0px_#000000]">
-        <div className="font-bold text-7xl max-w-4xl mb-6">
+        <div className="font-bold text-7xl max-w-4xl mb-10">
           Here’s what DentalTrack can do for you!
         </div>
         <motion.div className="">
