@@ -12,7 +12,7 @@ import { MainHeightContext } from "./lib/context";
 
 export default function Home() {
 
-  const mainRef = useRef(null)
+  const mainRef = useRef<HTMLDivElement>(null)
   const {mainHeight, setMainHeight} = useContext<any>(MainHeightContext)
 
   useEffect(() => {
