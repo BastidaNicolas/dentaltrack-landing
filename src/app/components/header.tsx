@@ -2,10 +2,12 @@
 import Link from "next/link";
 import NotifyBtn from "./notifyBtn";
 import { useContext } from "react";
-import { IsMenuOpenContext } from "../lib/context";
+import { IsMenuOpenContext, MainHeightContext, PricingScrollPositionContext } from "../lib/context";
 
 export default function Header() {
   const { menuOpen, setMenuOpen }: any = useContext(IsMenuOpenContext);
+  const {priceScroll, setPriceScroll} = useContext<any>(PricingScrollPositionContext);
+  const {mainHeight, setMainHeight} = useContext<any>(MainHeightContext);
 
   const handleClick = () => {
     if (window.innerWidth < 768) {
@@ -13,6 +15,17 @@ export default function Header() {
     }
     return;
   };
+  const handlePricingClick = () => {
+    if (window.innerWidth < 1024) {
+      setMenuOpen(false);
+      window.scrollTo(0,(mainHeight - (priceScroll * 2.1)));
+      return;
+    }
+    window.scrollTo(0,((mainHeight * 1.5) - (priceScroll * 1.7)));
+    return;
+  };
+
+  console.log("ITS GONNA SCROLL TO:", (mainHeight * 1.5) - priceScroll)
 
   return (
     <div className="bg-blue-600 py-3 md:py-2 px-3 xl:px-6 2xl:px-0 relative">
@@ -87,13 +100,13 @@ export default function Header() {
             >
               Features
             </Link>
-            <Link
-              href={"/#pricing"}
-              className="text-white font-bold md:mr-6 text-xl p-3 md:p-0 border-y-2 md:border-y-0 border-dotted"
-              onClick={handleClick}
+            <div
+              // href={"/#pricing"}
+              className="text-white hover:cursor-pointer font-bold md:mr-6 text-xl p-3 md:p-0 border-y-2 md:border-y-0 border-dotted"
+              onClick={handlePricingClick}
             >
               Plans
-            </Link>
+            </div>
             <Link
               href={"/"}
               className="text-white font-bold md:mr-12 text-xl p-3 md:p-0 border-b-2 md:border-y-0 border-dotted"

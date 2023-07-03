@@ -1,8 +1,7 @@
 "use client";
-import { useState } from "react";
+import { useContext, useEffect, useRef, useState } from "react";
 import PlanCard from "./cards/planCard";
-import OnViewDownToUp from "./animation/onViewDownToUp";
-import OnViewPopIn from "./animation/onViewPopIn";
+import { PricingScrollPositionContext } from "../lib/context";
 
 const monthlyPlans = [
   {
@@ -88,11 +87,20 @@ function RenderCards(planType: string) {
 
 export default function PaymentOptions() {
   const [pantType, setPlanType] = useState("monthly");
+  const pricingRef = useRef<HTMLDivElement>(null);
+  const {priceScroll, setPriceScroll} = useContext<any>(PricingScrollPositionContext);
+
+  useEffect(() => {
+    setPriceScroll(pricingRef.current?.clientHeight as number)
+  },[])
+
+  console.log(pricingRef)
 
   return (
     <div
       className="max-w-7xl m-auto flex flex-col items-center px-3 xl:px-6 2xl:px-0 pt-24 sm:pt-36"
       id="pricing"
+      ref={pricingRef}
     >
       <div className="text-4xl sm:text-5xl text-center font-bold capitalize mb-9 tracking-[-0.016em]">
         Choose you're subscription plan
