@@ -145,7 +145,7 @@ export default function PaymentOptions() {
         </div>
       </div>
 
-      <div className="grid grid-flow-col gap-4 xl:gap-8 w-full overflow-y-auto p-1">
+      <div className="grid grid-flow-col gap-4 xl:gap-0 w-full overflow-y-auto p-1">
         {RenderCards(pantType)}
       </div>
       {/* <div className="pt-5 font-bold capitalize px-2 text-center max-w-[370px]">
