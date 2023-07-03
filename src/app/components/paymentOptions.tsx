@@ -87,11 +87,11 @@ function RenderCards(planType: string) {
 
 export default function PaymentOptions() {
   const [pantType, setPlanType] = useState("monthly");
-  const pricingRef = useRef(null);
+  const pricingRef = useRef<HTMLDivElement>(null);
   const {priceScroll, setPriceScroll} = useContext<any>(PricingScrollPositionContext);
 
   useEffect(() => {
-    setPriceScroll(pricingRef.current?.clientHeight)
+    setPriceScroll(pricingRef.current?.clientHeight as number)
   },[])
 
   console.log(pricingRef)
