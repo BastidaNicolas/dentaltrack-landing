@@ -23,7 +23,7 @@ export default function Home() {
   },[mainRef])
 
   return (
-    <main ref={mainRef} style={{ top: `-${heroRef.current?.clientHeight * 0.95}px`, position: "sticky" }}>
+    <main ref={mainRef} className="lg:sticky" style={{ top: `-${heroRef.current?.clientHeight * 0.95}px`}}>
       <Hero heroRef={heroRef} />
       <GridSection />
       <div className="max-w-7xl m-auto mb-12 md:mb-24 px-3 xl:px-6 2xl:px-0">
