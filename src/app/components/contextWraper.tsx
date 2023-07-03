@@ -16,6 +16,7 @@ export default function ContextWraper({
 }: {
   children: React.ReactNode;
 }) {
+  const [isMobile, setIsMobile] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const menuOpenMemo: any = useMemo(
     () => ({ menuOpen, setMenuOpen }),
@@ -27,7 +28,6 @@ export default function ContextWraper({
     [mainHeight]
   );
 
-  const childDivRef = useRef(null);
   const targetRef = useRef(null);
   const { scrollYProgress } = useScroll({
     target: targetRef,
@@ -38,15 +38,34 @@ export default function ContextWraper({
     [scrollYProgress]
   );
 
+  useEffect(() =>{
+    if (window.innerWidth < 1024) {
+      setIsMobile(true)
+    }
+  },[])
+
   useEffect(() => {
     window.addEventListener("resize", () => {
+      if (window.innerWidth >= 1024) {
+        setIsMobile(false)
+      }
+      if (window.innerWidth < 1024) {
+        setIsMobile(true)
+      }
       if (window.innerWidth < 768) {
         setMenuOpen(false);
       }
     });
     return window.removeEventListener("resize", () => {
+      if (window.innerWidth >= 1024) {
+        setIsMobile(false)
+      }
+      if (window.innerWidth < 1024) {
+        setIsMobile(true)
+      }
       if (window.innerWidth < 768) {
         setMenuOpen(false);
+        setIsMobile(true)
       }
     });
   }, []);
@@ -97,12 +116,10 @@ export default function ContextWraper({
             </head>
             <motion.body
               className={`${roboto.className}`}
-              style={{ height: `${mainHeight * 1.5}px` }}
+              style={isMobile ? { height: `auto` }  : { height: `${mainHeight * 1.5}px` }}
               ref={targetRef}
             >
-              {/* <div ref={childDivRef}> */}
               {children}
-              {/* </div> */}
             </motion.body>
           </html>
         </ScrollYProgressContext.Provider>

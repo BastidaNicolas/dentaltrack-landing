@@ -14,16 +14,32 @@ export default function Home() {
 
   const mainRef = useRef<HTMLDivElement>(null)
   const {mainHeight, setMainHeight} = useContext<any>(MainHeightContext)
+  const [heroHeight, setHeroHeight] = useState(0)
   const heroRef = useRef<any>(null)
 
   useEffect(() => {
-    if(mainRef){
       setMainHeight(mainRef.current?.clientHeight)
-    }
   },[mainRef])
 
+  useEffect(() =>{
+    setHeroHeight(heroRef.current?.clientHeight * 0.95)
+  }, [heroHeight])
+
+  useEffect(() => {
+    window.addEventListener("resize", () => {
+      setHeroHeight(heroRef.current?.clientHeight * 0.95)
+      setMainHeight(mainRef.current?.clientHeight)
+
+    });
+    return window.removeEventListener("resize", () => {
+      setHeroHeight(heroRef.current?.clientHeight * 0.95)
+      setMainHeight(mainRef.current?.clientHeight)
+    });
+  }, [])
+
+
   return (
-    <main ref={mainRef} className="lg:sticky" style={{ top: `-${heroRef.current?.clientHeight * 0.95}px`}}>
+    <main ref={mainRef} className="lg:sticky" style={{ top: `-${heroHeight}px`}}>
       <Hero heroRef={heroRef} />
       <GridSection />
       <div className="max-w-7xl m-auto mb-12 md:mb-24 px-3 xl:px-6 2xl:px-0">
