@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useMemo, useRef, useState } from "react";
-import { IsMenuOpenContext, ScrollYProgressContext, MainHeightContext } from "../lib/context";
+import { IsMenuOpenContext, ScrollYProgressContext, MainHeightContext, PricingScrollPositionContext } from "../lib/context";
 import { motion, useScroll } from "framer-motion";
 
 import GoogleAnalytics from "./GoogleAnalytics";
@@ -27,6 +27,8 @@ export default function ContextWraper({
     () => ({ mainHeight, setMainHeight }),
     [mainHeight]
   );
+  const [priceScroll, setPriceScroll] = useState(0);
+  const priceScrollMemo:any = useMemo(() => ({priceScroll, setPriceScroll}), [priceScroll])
 
   const targetRef = useRef(null);
   const { scrollYProgress } = useScroll({
@@ -74,6 +76,7 @@ export default function ContextWraper({
     <IsMenuOpenContext.Provider value={menuOpenMemo}>
       <MainHeightContext.Provider value={mainHeightMemo}>
         <ScrollYProgressContext.Provider value={scrollYProgressMemo}>
+          <PricingScrollPositionContext.Provider value={priceScrollMemo}>
           <html lang="en" className={`${menuOpen ? "overflow-y-hidden" : ""}`}>
             <head>
               <meta
@@ -122,6 +125,7 @@ export default function ContextWraper({
               {children}
             </motion.body>
           </html>
+          </PricingScrollPositionContext.Provider>
         </ScrollYProgressContext.Provider>
       </MainHeightContext.Provider>
     </IsMenuOpenContext.Provider>
