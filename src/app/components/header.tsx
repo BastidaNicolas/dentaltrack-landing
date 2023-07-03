@@ -102,7 +102,7 @@ export default function Header() {
             </Link>
             <div
               // href={"/#pricing"}
-              className="text-white font-bold md:mr-6 text-xl p-3 md:p-0 border-y-2 md:border-y-0 border-dotted"
+              className="text-white hover:cursor-pointer font-bold md:mr-6 text-xl p-3 md:p-0 border-y-2 md:border-y-0 border-dotted"
               onClick={handlePricingClick}
             >
               Plans
