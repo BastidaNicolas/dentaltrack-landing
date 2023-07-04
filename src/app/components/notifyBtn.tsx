@@ -9,7 +9,7 @@ type notifyBtnType = {
 export default function NotifyBtn({ text, style }: notifyBtnType) {
   return (
     <div
-      className={`relative font-bold text-lg sm:text-base capitalize group block w-fit ${style}`}
+      className={`relative font-bold text-lg sm:text-base capitalize group block w-fit hover:cursor-pointer ${style}`}
       // href={"/#form"}
       // scroll={false}
       onClick={() => window.scrollTo(0, 200000)}
