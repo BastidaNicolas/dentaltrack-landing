@@ -19,7 +19,7 @@ export default function Home() {
 
   useEffect(() => {
       setMainHeight(mainRef.current?.clientHeight)
-  },[mainRef])
+  },[mainRef, setMainHeight])
 
   useEffect(() =>{
     setHeroHeight(heroRef.current?.clientHeight * 0.95)
@@ -35,7 +35,7 @@ export default function Home() {
       setHeroHeight(heroRef.current?.clientHeight * 0.95)
       setMainHeight(mainRef.current?.clientHeight)
     });
-  }, [])
+  }, [setMainHeight])
 
 
   return (
