@@ -5,6 +5,8 @@ import { motion, useScroll } from "framer-motion";
 
 import GoogleAnalytics from "./GoogleAnalytics";
 import { Roboto } from "next/font/google";
+import { usePathname, useParams, useRouter, useSearchParams} from 'next/navigation'
+
 
 const roboto = Roboto({
   subsets: ["latin"],
@@ -16,6 +18,11 @@ export default function ContextWraper({
 }: {
   children: React.ReactNode;
 }) {
+  const pathname = usePathname()
+  const param = useParams()
+  const router = useRouter()
+  const serch = useSearchParams()
+
   const [isMobile, setIsMobile] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const menuOpenMemo: any = useMemo(
@@ -72,6 +79,14 @@ export default function ContextWraper({
     });
   }, []);
 
+  // useEffect(() => {
+  //   if(param == '#form'){
+  //     window.scrollTo(0, 200000)
+  //   }
+  // },[param])
+
+  console.log(serch)
+
   return (
     <IsMenuOpenContext.Provider value={menuOpenMemo}>
       <MainHeightContext.Provider value={mainHeightMemo}>
@@ -119,7 +134,7 @@ export default function ContextWraper({
             </head>
             <motion.body
               className={`${roboto.className}`}
-              style={isMobile ? { height: `auto` }  : { height: `${mainHeight * 1.5}px` }}
+              style={isMobile || pathname == '/blog' ? { height: `auto` }  : { height: `${mainHeight * 1.5}px` }}
               ref={targetRef}
             >
               {children}

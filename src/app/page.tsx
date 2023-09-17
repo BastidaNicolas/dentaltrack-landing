@@ -64,9 +64,9 @@ export default function Home() {
       </div>
       <TwoColSection />
       <PaymentOptions />
-      <QueryClientComponent>
+      {/* <QueryClientComponent>
         <Form />
-      </QueryClientComponent>
+      </QueryClientComponent> */}
       <Footer />
     </main>
   );
