@@ -91,11 +91,11 @@ export default function GridSection() {
   );
 
   return (
-    <div className="z-0 sm:px-3 xl:px-6 2xl:px-0 mb-24 sm:my-24 " id="features">
+    <div className="z-0 sm:px-3 xl:px-6 2xl:px-0 pb-16 sm:my-24 " id="features">
       <div className="z-0 relative max-w-7xl m-auto border-b-2 sm:border-2 border-black sm:rounded-2xl bg-neutral-100 px-3 py-9  sm:p-9 lg:pb-0 sm:drop-shadow-[8px_8px_0px_#000000]">
         <div className="z-20">
           <div className="font-bold text-5xl sm:text-6xl lg:text-7xl max-w-3xl mb-10 tracking-[-0.016em]">
-            Here’s what DentalTrack can do for you!
+            Here&apos;s what DentalTrack can do for you!
           </div>
           <div className="hidden lg:block">
             <motion.div className="">
@@ -110,7 +110,7 @@ export default function GridSection() {
                 className="text-lg max-w-lg"
               >
                 Keep track of all your appointments in one place, create
-                "offices" for each location and filter by status, date and
+                &quot;offices&quot; for each location and filter by status, date and
                 patient name.
               </motion.p>
             </motion.div>
@@ -148,7 +148,7 @@ export default function GridSection() {
                 className="text-lg max-w-lg"
               >
                 By reducing missed appointments and sending timely reminders,
-                you'll increase patient loyalty and referrals.
+                you&apos;ll increase patient loyalty and referrals.
               </motion.p>
             </div>
           </div>
@@ -159,7 +159,7 @@ export default function GridSection() {
               </div>
               <p className="text-xl mb-2 lg:mb-0">
                 Keep track of all your appointments in one place, create
-                "offices" for each location and filter by status, date and
+                &quot;offices&quot; for each location and filter by status, date and
                 patient name.
               </p>
               <div className="relative flex justify-center">
@@ -426,7 +426,7 @@ export default function GridSection() {
               </div>
               <p className="text-xl mb-2 lg:mb-0">
                 By reducing missed appointments and sending timely reminders,
-                you'll increase patient loyalty and referrals.
+                you&apos;ll increase patient loyalty and referrals.
               </p>
               <div className="relative flex justify-center">
                 <svg

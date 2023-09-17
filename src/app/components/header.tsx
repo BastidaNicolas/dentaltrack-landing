@@ -3,11 +3,13 @@ import Link from "next/link";
 import NotifyBtn from "./notifyBtn";
 import { useContext } from "react";
 import { IsMenuOpenContext, MainHeightContext, PricingScrollPositionContext } from "../lib/context";
+import { usePathname } from "next/navigation";
 
 export default function Header() {
   const { menuOpen, setMenuOpen }: any = useContext(IsMenuOpenContext);
   const {priceScroll, setPriceScroll} = useContext<any>(PricingScrollPositionContext);
   const {mainHeight, setMainHeight} = useContext<any>(MainHeightContext);
+  const pathname = usePathname();
 
   const handleClick = () => {
     if (window.innerWidth < 768) {
@@ -94,6 +96,13 @@ export default function Header() {
             } md:transition-none md:duration-0 z-30 fixed md:relative md:animate-fade-in top-0 left-0 w-full md:w-auto h-full md:h-auto bg-blue-600 flex flex-col md:flex-row md:items-center pt-16 md:pt-0 overflow-y-auto`}
           >
             <Link
+              href={"/"}
+              className={`${pathname === "/blog" ? '':'hidden' } text-white font-bold md:mr-6 text-xl p-3 md:p-0 border-t-2 md:border-t-0`}
+              onClick={handleClick}
+            >
+              Home
+            </Link>
+            <Link
               href={"/#features"}
               className="text-white font-bold md:mr-6 text-xl p-3 md:p-0 border-t-2 md:border-t-0"
               onClick={handleClick}
@@ -102,25 +111,25 @@ export default function Header() {
             </Link>
             <div
               // href={"/#pricing"}
-              className="text-white hover:cursor-pointer font-bold md:mr-6 text-xl p-3 md:p-0 border-y-2 md:border-y-0 border-dotted"
+              className={`${pathname === "/blog" ? 'md:mr-12':'md:mr-6' } text-white hover:cursor-pointer font-bold text-xl p-3 md:p-0 border-y-2 md:border-y-0 border-dotted`}
               onClick={handlePricingClick}
             >
               Plans
             </div>
             <Link
-              href={"/"}
-              className="text-white font-bold md:mr-12 text-xl p-3 md:p-0 border-b-2 md:border-y-0 border-dotted"
+              href={"/blog"}
+              className={`${pathname === "/blog" ? 'hidden':'' } text-white font-bold md:mr-12 text-xl p-3 md:p-0 border-b-2 md:border-y-0 border-dotted`}
               onClick={handleClick}
             >
               Blog
             </Link>
             <div className="flex flex-col flex-grow justify-end p-3 md:p-0.5">
               <div className="capitalize text-white font-bold text-lg text-center mb-2 md:hidden">
-                Want to be notified?
+                Want to get started?
               </div>
               <div onClick={handleClick}>
                 <NotifyBtn
-                  text={"get notified"}
+                  text={"Sign In"}
                   style="md:w-fit w-full text-center"
                 />
               </div>

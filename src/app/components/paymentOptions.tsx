@@ -92,18 +92,18 @@ export default function PaymentOptions() {
 
   useEffect(() => {
     setPriceScroll(pricingRef.current?.clientHeight as number)
-  },[])
+  },[setPriceScroll])
 
   console.log(pricingRef)
 
   return (
     <div
-      className="max-w-7xl m-auto flex flex-col items-center px-3 xl:px-6 2xl:px-0 pt-24 sm:pt-36"
+      className="max-w-7xl m-auto flex flex-col items-center px-3 xl:px-6 2xl:px-0 pt-24 pb-32 sm:pt-36"
       id="pricing"
       ref={pricingRef}
     >
       <div className="text-4xl sm:text-5xl text-center font-bold capitalize mb-9 tracking-[-0.016em]">
-        Choose you're subscription plan
+        Choose you&apos;re subscription plan
       </div>
       <div className="mb-7 flex sm:justify-center">
         <div className="relative mr-4">

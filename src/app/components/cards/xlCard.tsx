@@ -15,7 +15,7 @@ export default function XlCard({
   reverse,
 }: XlCardType) {
   return (
-    <div className={`flex mb-7 md:mb-24 ${reverse ? 'lg:flex-row-reverse':'lg:flex-row'} flex-col-reverse lg:gap-x-4 sm:gap-y-3 xl:gap-x-[106px]`}>
+    <div className={`flex pb-12 md:pb-24 ${reverse ? 'lg:flex-row-reverse':'lg:flex-row'} flex-col-reverse lg:gap-x-4 sm:gap-y-3 xl:gap-x-[106px]`}>
       <div className="relative w-full lg:min-w-[476px] xl:min-w-[528px] h-[clamp(247px,_90vw,_592px)] lg:h-[381px] xl:h-[423px]">
         <Image
           src={image}
